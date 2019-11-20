@@ -1,0 +1,12 @@
+Descripción de los objetivos particulares necesarios para llevar a la cabo el trabajo
+
+
+1. Obtener documentación del funcionamiento de todos los módulos del sintetizador EMS Synthi 100 del GME de Cuenca, así como sus conexiones.
+
+2. Comprender y describir el funcionamiento de cada módulo, su comportamiento y sus parámetros desde el punto de vista de su resultado acústico.
+
+3. Diseñar un prototipo del EMS Synthi 100 en Supercollider, reproduciendo digitalmente el funcionamiento de todas sus partes.
+
+4. Diseñar una interfaz móvil capaz de comunicarse por OSC con el programa de Supercollider, simulando la interfaz física del sintetizador.
+
+
