@@ -1,12 +1,27 @@
+TÍTULO DEL TFM:	??? (estoy buscando algo que haga referencia a la historia del GME, del S100, a su música... y que al tiempo diga algo de lo que voy a hacer)
+SUBTÍTULO:		"Una propuesta de emulación por software del sintetizador EMS Synthi 100 del Gabinete de Música Electroacústica de Cuenca"
+
+
 Descripción de los objetivos particulares necesarios para llevar a la cabo el trabajo
+=====================================================================================
 
+1. Obtener y experimentar con diversos emuladores de sintetizadores tanto EMS como otros similares para evaluarlos.
 
-1. Obtener documentación del funcionamiento de todos los módulos del sintetizador EMS Synthi 100 del GME de Cuenca, así como sus conexiones.
+2. Obtener documentación del funcionamiento de todos los módulos del sintetizador EMS Synthi 100 del GME de Cuenca, así como sus conexiones.
+	2.a. Recopilar toda la información técnica posible tanto de este sintentizador como de otros de EMS similares (manuales de usiario, manuales de servicio, descripciones técnicas, etc.).
+	2.b. Fotografiar por completo y con detalle todos los módulos del S100 del GME.
+	2.c. Experimentar y tomar muestras sonoras del propio Synthi 100 del GME para "afinar" el dispositivo de software.
 
-2. Comprender y describir el funcionamiento de cada módulo, su comportamiento y sus parámetros desde el punto de vista de su resultado acústico.
+3. Comprender y describir el funcionamiento de cada módulo, su comportamiento y sus parámetros desde el punto de vista de su resultado acústico.
+	3.a. Poner por escrito el proceso de creación de los diversos módulos y características del dispositivo de software.
+	3.b. Ampliar la información con diversa bibliografía según se necesite (sobre sonido digital, síntesis, librerías de software, etc.)
 
-3. Diseñar un prototipo del EMS Synthi 100 en Supercollider, reproduciendo digitalmente el funcionamiento de todas sus partes.
+4. Diseñar un prototipo del S100 en Supercollider, reproduciendo digitalmente el funcionamiento de todas sus partes.
+	4.a. Trabajar en una propuesta síntesis digital imitando los diversos módulos del S100, independientemente de la información de la que se pueda disponer en cada momento, dejándo abierta la posibilidad de reestablecer de forma sencilla los diversos parámetros del sintentizador físico según se van obteniendo.
+	4.b. Establecer e implementar diversas hipótesis de funcionamiento en los módulos o características de las que no se disponga suficiente información técnica, en vistas a modificarse posteriormente si se estima oportuno.
 
-4. Diseñar una interfaz móvil capaz de comunicarse por OSC con el programa de Supercollider, simulando la interfaz física del sintetizador.
+5. Diseñar una interfaz móvil capaz de comunicarse por OSC con el programa de Supercollider, simulando la interfaz física del sintetizador.
+	5.a. Implementar una interfaz móvil en TouchOSC o similar simultáneamente a la creación de los diversos módulos en Supercollider.
+	5.b. Implementar una interfaz móvil en Flutter (de códio abierto y eventualmente multiplataforma) que simule en la medida de lo posible el aspecto e interfaz real del S100 del GME.
 
 
