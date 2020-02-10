@@ -25,3 +25,28 @@ Descripción de los objetivos particulares necesarios para llevar a la cabo el t
 	5.b. Implementar una interfaz móvil en Flutter (de códio abierto y eventualmente multiplataforma) que simule en la medida de lo posible el aspecto e interfaz real del S100 del GME.
 
 
+
+
+
+
+
+Esquema general de la memoria
+=============================
+
+
+1. Un capítulo que analice el estado de la cuestión. Qué otras cosas has visto en el mundo que te llevan a hacer lo que haces…. Analiza brevente unos cuántos casos que tengan verdadera relevancia para la concepción de tu trabajo
+
+2. Una descripción de los objetivos particulares que necesites cubrir para llevar a la cabo el trabajo
+
+3. Una descripción metodológica de la forma en que te has planteado la asunción de los objetivos
+
+4. Una descripción exhaustiva de tu herramienta y su funcionamiento. 
+
+5. Una reflexión acerca de lo que ha supuesto para ti realizar esta investigación
+
+6. Como va la realización del trabajo a influenciar futuro artístico y profesional 
+
+7. Un capítulo de agradecimientos, si es necesario.
+
+8. Una bibliografía según las normas de la APA, que es el sistema que se emplea en la UB
+
