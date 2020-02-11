@@ -2,6 +2,68 @@ TÍTULO DEL TFM:	??? (estoy buscando algo que haga referencia a la historia del 
 SUBTÍTULO:		"Una propuesta de emulación por software del sintetizador EMS Synthi 100 del Gabinete de Música Electroacústica de Cuenca"
 
 
+
+
+Esquema general de la memoria
+=============================
+
+1. ¿Otro emulador más? Antecedentes de este trabajo
+    1.1 Analógico versus digital
+        Clásica discusión. El renacer de lo analógico y lo retro. 
+    1.2 Emuladores y plugins de referencia
+        Experiencia con emulación de órganos de tubos. La proliferación de plugins. Grandes soluciones y muy caras. 
+    1.3 La importancia de la interfaz
+           La interfaz determina en gran medida qué podemos hacer y qué no, influye en el gesto, en la relación persona-máquina. El feedback bajo los dedos... Conocer la síntesis analógica es fundamental para entender la digital.
+2. Objetivos de este trabajo
+        Objetivos pedagógicos. Objetivos musicales, Objetivos culturales.
+3. Programando el Synthi 100: Decisiones metodológicas.
+    3.1 Conociendo el Synthi 100 del GME de Cuenca
+        Mi acceso al GME. Oportunidad de este trabajo al tiempo que la restauración del S100. Colaboración de Sylvia Molina y Julio Sanz.
+    3.2 Arqueología organológica
+        La dificultad de emular un artefacto de difícil acceso. Importancia del estudio de la música electrónica del momento, de otros sintetizadores, de algunos documentos informativos, etc.
+    3.4 La elección de los lenguajes de programación
+    3.5 En busca de una arquitectura firme
+    3.6 Diseñando una interfaz abierta
+    3.7 Work in progress..
+        No se emula todo ni se imita todo pero es posible ampliarlo y mejorarlo hasta cualquier nivel, analizando el Synthi 100, programando Ugens en C, etc.
+4. El EMS Synthi 100 del Gabinete de Música Electroacústica de Cuenca
+    4.1 Breve historia del GME
+    4.2 El último Synthi 100
+    4.3 Breve descripción del sintetizador
+        Sintetizador modular, parámetros, control de voltaje, patchbay... un instrumento de propósito general, para la experimentación.
+5. Descripción de la aplicación
+    4.1 Instalando y ejecutando el emulador
+        Requerimientos, instalación del Quark, repositorio, plataformas...
+    4.2 Un módulo, una clase
+    4.3 Interfaz de SuperCollider
+    4.4 Más allá de la pantalla: interfaz OSC
+    4.5 Controlando el flujo
+        4.5.1 Control de audio y control de voltaje
+            Todo se puede conectar con todo... Problema de orden de ejecución. Multiplicación de buses y syths en SC.
+        4.5.2 Grillas de conexiones y pines
+        4.5.3 Inputs y outputs externos
+    4.6 Generadores de audio y voltage
+        4.6.1 Osciladores
+        4.6.2 Generadores de ruido
+        4.6.3 Generador de voltage de control aleatorio
+        4.6.4 Envolventes
+    4.7 Efectos
+        4.7.1 Filtros
+        4.7.2 Moduladores en anillo
+        4.7.3 Reverberación
+        4.7.4 Eco A. D. L.
+        4.7.5 Banco de filtros de octava
+        4.7.6 Canales de salida, panorama y filtro.
+    4.8 Decisiones, compromisos y límites del software
+    4.9 Futuro de la aplicación
+6. Una reflexión acerca de lo que ha supuesto para ti realizar esta investigación
+7. Como va la realización del trabajo a influenciar futuro artístico y profesional 
+8. Un capítulo de agradecimientos, si es necesario.
+9. Una bibliografía según las normas de la APA, que es el sistema que se emplea en la UB
+  
+
+
+
 Descripción de los objetivos particulares necesarios para llevar a la cabo el trabajo
 =====================================================================================
 
@@ -30,23 +92,4 @@ Descripción de los objetivos particulares necesarios para llevar a la cabo el t
 
 
 
-Esquema general de la memoria
-=============================
-
-
-1. Un capítulo que analice el estado de la cuestión. Qué otras cosas has visto en el mundo que te llevan a hacer lo que haces…. Analiza brevente unos cuántos casos que tengan verdadera relevancia para la concepción de tu trabajo
-
-2. Una descripción de los objetivos particulares que necesites cubrir para llevar a la cabo el trabajo
-
-3. Una descripción metodológica de la forma en que te has planteado la asunción de los objetivos
-
-4. Una descripción exhaustiva de tu herramienta y su funcionamiento. 
-
-5. Una reflexión acerca de lo que ha supuesto para ti realizar esta investigación
-
-6. Como va la realización del trabajo a influenciar futuro artístico y profesional 
-
-7. Un capítulo de agradecimientos, si es necesario.
-
-8. Una bibliografía según las normas de la APA, que es el sistema que se emplea en la UB
 
