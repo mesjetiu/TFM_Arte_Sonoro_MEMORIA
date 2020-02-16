@@ -1,33 +1,3 @@
 \chapter{Descripción de la aplicación}
-	\section{Interfaz gráfica de SuperCollider}
-	Cuando instanciamos la clase \texttt{Synthi100} lo primero que encontramos es una serie de ventanas que se corresponden con los diversos paneles de sintetizador. Repartidos a lo largo y ancho de la pantalla del ordenador, manteniendo una disposición análoga a la de aquel. Cada ventana tiene como fondo una fotografía del Synthi 100, albergando en su capa superior toda una serie de mandos que provee SuperCollider para el diseño de interfaces gráficas, <<sliders>> y <<knobs>> principalmente. Los colores de estos han sido tomados de la misma fotografía para darle una apariencia lo más integrada posible con el conjunto. 
-	
-	Cada una de las ventanas puede ser cambiada de posición y de tamaño de forma independiente. El tamaño por defecto de las ventanas, si bien nos permite tener una visión general del conjunto e identificar rápidamente cada panel del sintetizador, no nos permite ver los detalles suficientes como para trabajar sin hacer zoom. En este punto se hace totalmente necesario cambiar el tamaño de cada ventana sobre la que se desee trabajar. Por esta razón se han creado una serie de atajos de teclado (\textit{cfr.} tabla \ref{table:atajos})  y de ratón para conseguir hacerlo con cierta agilidad. Con un poco de práctica es posible usarlos con mucha soltura tanto en demostraciones como en la creación sonora.
-	
-	% Incluir aquí una tabla con los atajos de teclado
 
-\begin{table}
-	\begin{center}
-		\begin{tabular}{ |l|l| }
-  		\hline
-  		\texttt{v} & Hace visibles o invisibles los mandos de la ventana en foco\\
-  		\texttt{1} & Lleva al frente la ventana del panel 1\\
-  		\texttt{2} & Lleva al frente la ventana del panel 2\\
-  		\texttt{3} & Lleva al frente la ventana del panel 3\\
-  		\texttt{4} & Lleva al frente la ventana del panel 4\\
-  		\texttt{5} & Lleva al frente la ventana del panel 5\\
-  		\texttt{6} & Lleva al frente la ventana del panel 6\\
-  		\texttt{7} & Lleva al frente la ventana del panel 7\\
-  		\texttt{+} & Aumenta el tamaño de la ventana en foco\\
-  		\texttt{-} & Disminuye el tamaño de la ventana en foco\\
-  		\hline
-		\end{tabular}
-		\caption[Atajos de teclado]{Atajos de teclado de la Interfáz gráfica de Supercollider}
-		\label{table:atajos}
-	\end{center}
-\end{table}
-
-	
-	Se ha tenido especial cuidado en usar solo \textit{views} compartidas por las tres plataformas en las que se puede compilar SuperCollider (Linux, Windows y MacOS)\footnote{La lista de clases y su compatibilidad entre plataformas se puede encontrar en la ayuda de Supercollider. 
-	
-	Recuperado de \texttt{http://doc.sccode.org/Overviews/GUI-Classes.html} (16 de febrero de 2020) } . Usando exclusivamente estas clases, se garantiza la compatibilidad hacia el futuro del diseño de la interfaz gráfica de usuario.
+	\input{./capitulos/Section_Interfaz_Grafica}
