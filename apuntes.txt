@@ -35,7 +35,7 @@ Esquema general de la memoria
     4.1 Instalando y ejecutando el emulador
         Requerimientos, instalación del Quark, repositorio, plataformas...
     4.2 Un módulo, una clase
-    4.3 Interfaz de SuperCollider
+    4.3 Interfaz gráfica de SuperCollider
     4.4 Más allá de la pantalla: interfaz OSC
     4.5 Controlando el flujo
         4.5.1 Control de audio y control de voltaje
@@ -87,6 +87,33 @@ Descripción de los objetivos particulares necesarios para llevar a la cabo el t
 	5.b. Implementar una interfaz móvil en Flutter (de códio abierto y eventualmente multiplataforma) que simule en la medida de lo posible el aspecto e interfaz real del S100 del GME.
 
 
+visita al GME 12/02/2020
+=====================
+
+pruebas con Envelope Shaper:
+
+Envelope level no se oye (quizas es solo CV)
+
+Gated y hold se comportan igual.
+Sustain es nivel (lo normal)
+Delay no funciona
+
+Triggered
+Ataca, decay, sustain es un nivel muy bajo. Se queda sujeto en sustain cuando está Gate 1
+
+Free run. Funciona delay. Sustain parece no tener función (se aprecia un pequeño tiempo entre ataque y sustain, pero muy pequeño. Parece un error)
+
+Gated F/R. No repite!!. Sustain es como triggered, es un nivel muy bajo. Se comporta como triggered.
+
+Parece que solo hay 3 funciones:
+
+Gated y Hold: ADSR
+Triggered y Gated F/R: ADR (R tiempo de espera)
+Free run: bucle en DADR (S tiene un influjo en el tiempo de espera pero pequeño)
+
+Propuesta:
+Hold: ADSR con espera entre A y D
+Gated F/R: como Free run pero cuando Gate=1
 
 
 
