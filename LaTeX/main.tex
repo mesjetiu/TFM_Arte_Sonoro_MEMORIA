@@ -6,6 +6,7 @@
 \usepackage[utf8]{inputenc} % acentos sin codigo
 \renewcommand{\shorthandsspanish}{}
 
+\usepackage{apacite}
 \usepackage{titlesec, blindtext, color}
 \definecolor{gray75}{gray}{0.75}
 \newcommand{\hsp}{\hspace{20pt}}
@@ -38,23 +39,32 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
+\bibliographystyle{apacite}
 %\frontmatter
 %	\input{./capitulos/portada}
 	\newpage
 	\mbox{}
 	\thispagestyle{empty} % para que no se numere esta página
+%	\pagestyle{fancy}
+	
 
-	\pagestyle{fancy}
 
 	\tableofcontents
 	\listoffigures % indice de figuras
 	\addcontentsline{toc}{chapter}{Índice de figuras}
 	\listoftables
 	\addcontentsline{toc}{chapter}{Índice de cuadros}
+	
+%\bibliography{bibtex/biblio} % database is "biblio.bib" located in a "bibtex" subfolder 
+	
 
+
+	\input{./capitulos/Chapter_Descripcion_Aplicacion}
+%	esto es una cita~\cite{Freud} y otra~\cite{Einstein}
 
 % Aquí van los diversos capítulos:
 	%\input{} % Introducción
+
 
 
 \end{document}
