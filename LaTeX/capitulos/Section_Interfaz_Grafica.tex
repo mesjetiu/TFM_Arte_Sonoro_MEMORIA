@@ -25,6 +25,10 @@ Cada una de las ventanas puede ser cambiada de posición y de tamaño de forma i
 	\end{center}
 \end{table}
 
-Se ha tenido especial cuidado en usar solo \textit{views} compartidas por las tres plataformas en las que se puede compilar SuperCollider (Linux, Windows y MacOS)\footnote{La lista de clases y su compatibilidad entre plataformas se puede encontrar en la ayuda de Supercollider. 
+Se ha tenido especial cuidado en usar solo \textit{views} compartidas por las tres plataformas en las que se puede compilar SuperCollider (Linux, Windows y MacOS)\footnote{La lista de clases, los frameworks en los que están escritas y su compatibilidad entre plataformas se puede encontrar en la ayuda de SuperCollider: 
 
-Recuperado de \texttt{http://doc.sccode.org/Overviews/GUI-Classes.html} (16 de febrero de 2020) } . Usando exclusivamente estas clases, se garantiza la compatibilidad hacia el futuro del diseño de la interfaz gráfica de usuario.
+\texttt{http://doc.sccode.org/Overviews/GUI-Classes.html} (16 de febrero de 2020) } . Usando exclusivamente estas clases, se garantiza la compatibilidad hacia el futuro del diseño de la interfaz gráfica de usuario.
+
+En cada uno de los diferentes <<widgets>> cuya función es enviar al programa un valor entre un rango continuo ---como es el caso de los diales (<<knobs>>) y los controles deslizantes (<<sliders>>) podemos---, podemos variar su valor con diferentes valores de precisión con la ayuda de diversas teclas pulsadas simultáneamente al movimiento del ratón o a la pulsación de las flechas. Ordenados desde el movimiento más grueso al más fino, la teclas a pulsar para alterar la velocidad son: \texttt{Shift}, sin tecla, \texttt{Ctrl} y \texttt{Alt}.
+
+Es importante notar que la forma en la que se cambia el valor de un dial no es haciendo un gesto rotatorio con el ratón. Se ha optado, en cambio, por un movimiento horizontal. Si bien el movimiento rotatorio puede resultar más intuitivo, tiene la característica que un solo click sobre el dial cambia su valor de golpe al correspondiente al radio sobre el que el puntero se encuentra. Esto hace imposible hacer click sobre el dial sin alterar su valor drásticamente.
