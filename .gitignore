@@ -1,14 +1,9 @@
-
-LaTeX/main.aux
-LaTeX/main.lof
-LaTeX/main.log
-LaTeX/main.lot
+*.aux
+*.lof
+*.lot
 LaTeX/main.pdf
-LaTeX/main.synctex.gz
-LaTeX/main.toc
-pruebas bib/main.aux
-pruebas bib/main.bbl
-LaTeX/bibtex/texput.log
-LaTeX/capitulos/Chapter_Descripcion_Aplicacion.log
-LaTeX/main.bbl
-LaTeX/main.blg
+*.gz
+*.log
+*.toc
+*.bbl
+*.blg
