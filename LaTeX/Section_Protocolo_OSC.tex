@@ -1,2 +1,24 @@
 \section{Más allá de la pantalla: interfaz OSC}
 
+Tabla de los mensajes OSC que entiende la clase Synthi100
+
+\begin{table}
+	\begin{center}
+		\begin{tabular}{ l|c|l|l|c }
+			Módulo			& Número			& Parámetro				& Nivel 		& Ejemplo \\
+			% Módulo de oscilador.
+			\hline 
+			\multirow{7}{*}{\texttt{/OSC}}	& \multirow{7}{*}{\texttt{/[1-12]}}	& \texttt{/pulse/level}	&\multirow{7}{*}{\texttt{/[0-10]}} & \multirow{7}{*}{\texttt{/OSC/3/pulse/level, 5}}\\
+			& & \texttt{/pulse/shape} && \\
+			& & \texttt{/sine/level} && \\
+			& & \texttt{/sine/symmetry} &&\\
+			& & \texttt{/triangle/level} &&\\
+			& & \texttt{/sawtooth/level} &&\\
+			& & \texttt{/frequency} &&\\
+			\hline
+			
+		\end{tabular}
+		\caption[Estructura de los mensajes OSC]{Estructura de la cadena de texto (\textit{OSC Type Tag String}) y valor de los mensajes OSC para comunicarse con Synthi100.}
+		\label{table:osc}
+	\end{center}
+\end{table}
