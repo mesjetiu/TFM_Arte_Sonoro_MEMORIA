@@ -7,12 +7,12 @@ Tabla de los mensajes OSC que entiende la clase Synthi100
 		\begin{tabular}{ lcllr }
 			\multicolumn{3}{c}{\textit{OSC Type Tag String}} \\
 			\cline{1-3}
-			Módulo			& Número			& Parámetro				& \textit{Nivel} 	& Módulo de Synthi 100 \\
+			Módulo			& Número			& Parámetro				& \textit{Level} 	& Módulo de Synthi 100 \\
 			
 			% Módulo de oscilador.
 			\hline 
 			\multirow{7}{*}{\texttt{/OSC}}	& \multirow{7}{*}{\texttt{/[1-12]}}	& \texttt{/pulse/level}	&\texttt{[0.0-10.0]} & \multirow{7}{*}{\textit{Oscillators}}\\
-			& & \texttt{/pulse/shape} & \texttt{[-5.-5.0]} & \\
+			& & \texttt{/pulse/shape} & \texttt{[-5.0-5.0]} & \\
 			& & \texttt{/sine/level} & \texttt{[0.0-10.0]} & \\
 			& & \texttt{/sine/symmetry} & \texttt{[-5.0-5.0]} &\\
 			& & \texttt{/triangle/level} & \texttt{[0.0-10.0]}  &\\
@@ -26,10 +26,14 @@ Tabla de los mensajes OSC que entiende la clase Synthi100
 			\hline
 			
 			% Módulo de Output channels
-			\multirow{4}{*}{\texttt{/out}}	& \multirow{4}{*}{\texttt{/[1-8]}}	& \texttt{/filter}	&\texttt{[-5-5]} & \multirow{4}{*}{\textit{Output Channels}}\\
+			\multirow{4}{*}{\texttt{/out}}	& \multirow{4}{*}{\texttt{/[1-8]}}	& \texttt{/filter}	&\texttt{[-5.0-5.0]} & \multirow{4}{*}{\textit{Input Amplifiers}}\\
 			& & \texttt{/pan} & \texttt{[-5.0-5.0]} & \\
-			& & \texttt{/on} & \texttt{[0-1]} & \\
+			& & \texttt{/on} & \texttt{[0/1]} & \\
 			& & \texttt{/level} & \texttt{[0.0-10.0]} &\\
+			\hline
+			
+			% Módulo de Input Amplifiers
+			\multirow{1}{*}{\texttt{/in}}	& \multirow{1}{*}{\texttt{/[1-8]}}	& \texttt{/level}	&\texttt{[0.0-10.0]} & \multirow{1}{*}{\textit{Output Channels}}\\
 			\hline
 			
 		\end{tabular}
