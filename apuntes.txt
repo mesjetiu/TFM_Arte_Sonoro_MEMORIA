@@ -2,6 +2,13 @@ TÍTULO DEL TFM:	??? (estoy buscando algo que haga referencia a la historia del 
 SUBTÍTULO:		"Una propuesta de emulación por software del sintetizador EMS Synthi 100 del Gabinete de Música Electroacústica de Cuenca"
 
 
+Limitaciones encontradas de la simulación digital del procesamiento analógico:
+* aliasing
+* feedback digital diferente del analógico
+* latencia 
+
+
+
 
 
 Esquema general de la memoria
