@@ -70,6 +70,9 @@ Esquema general de la memoria
   
 
 
+Hablar de la realimentación y la impredicibilidad de este efecto tanto en los dispositivos analógicos como en los digitales.
+
+
 
 Descripción de los objetivos particulares necesarios para llevar a la cabo el trabajo
 =====================================================================================
