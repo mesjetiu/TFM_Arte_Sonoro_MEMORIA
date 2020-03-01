@@ -1,6 +1,12 @@
 \section{Más allá de la pantalla: interfaz OSC}
 
-Tabla de los mensajes OSC que entiende la clase Synthi100
+\textit{Open Sound Control}, conocido por sus siglas OSC, es, tal como lo define la propia CNMAT (\textit{Center for New Music and Audio Technologies}), <<un protocolo para la comunicación entre computadoras, sintetizadores y otros dispositivos multimedia, optimizado para la tecnología en red>>. Nacido en el CNMAT, OSC busca ser un MIDI mejorado, especialmente en lo que se refiere a la facilidad de implementación, precisión de los datos y a la expresividad de su sintaxis. Un mensaje OSC está formado por una cadena de texto en estilo URL, y los valores formados por 32 bits, tanto enteros como de coma flotante. 
+
+Por todo esto, y por su fácil uso en SuperCollider, este protocolo ha sido escogido, no solo para que la clase Synthi100 se comunique con interfaces remotas, sino cualquier comunicación con ella se produce a través de este protocolo. Se ha creado un único método en la clase con el que el usuario puede interactuar de forma segura: \texttt{Synthi100.setParameterOSC {|string, value, addrForbidden|}. \texttt{string} es la cadena de texto del mensaje y \texttt{value}, el valor. Ambos forman el mensaje OSC que se envía al sintetizador. Tanto si los valores se introducen desde la red, como desde la interfaz gráfica por defecto como a través de mensajes de texto de código, el método recomendado es precisamente este.
+
+Todo mensaje recibido por el sintetizador es devuelto, a modo de eco, a todas las direcciones con las que el sintetizador ha sido <<emparejado>> previamente. El emparejamiento de los diversos dispositivos al sintetizador se realiza por medio del método \texttt{Synthi100.pairDevice()}, reconociendo cualquier dispositivo en red que envíe el mensaje \texttt{\ping} en los siguientes 4 segundos\footnote{Este mensaje se ha elegido para mantener compatibilidad con el software \textit{TouchOSC} (\texttt{https://hexler.net/products/touchosc}, una App para dispositivos móviles que permite diseñar interfaces eficientes y muy funcionales, usando el protocolo OSC)}. El argumento \texttt{AddrFrobidden} del método de envío de mensajes OSC contendrá opcionalmente la dirección del dispositivo remitente, y está pensado para bloquear dicha dirección a la hora de hacer eco del mensaje.
+
+Esta interfaz única de comunicación de la clase Synthi100 con el exterior extiende las posibilidades de uso de este dispositivo más allá de la propia interfaz gráfica por defecto. Podemos imaginar interfaces en red creadas ad hoc o, quizás algo mucho más sugerente y creativo, interfaces de hardware a partir de microchips tipo Arduino. Por esta razón se ha cuidado que los mensajes OSC necesarios para comunicarse con el sintetizador sean autoexplicativos. En la tabla se recoge la formación de todos los mensajes OSC posibles, asociados a cada uno de los módulos.
 
 \begin{table}
 	\begin{center}
@@ -11,7 +17,7 @@ Tabla de los mensajes OSC que entiende la clase Synthi100
 			
 			% Módulo de oscilador.
 			\hline 
-			\multirow{7}{*}{\texttt{/OSC}}	& \multirow{7}{*}{\texttt{/[1-12]}}	& \texttt{/pulse/level}	&\texttt{[0.0-10.0]} & \multirow{7}{*}{\textit{Oscillators}}\\
+			\multirow{7}{*}{\texttt{/osc}}	& \multirow{7}{*}{\texttt{/[1-12]}}	& \texttt{/pulse/level}	&\texttt{[0.0-10.0]} & \multirow{7}{*}{\textit{Oscillators}}\\
 			& & \texttt{/pulse/shape} & \texttt{[-5.0-5.0]} & \\
 			& & \texttt{/sine/level} & \texttt{[0.0-10.0]} & \\
 			& & \texttt{/sine/symmetry} & \texttt{[-5.0-5.0]} &\\
