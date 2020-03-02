@@ -10,20 +10,39 @@ Esta interfaz única de comunicación de la clase Synthi100 con el exterior exti
 
 \begin{table}
 	\begin{center}
-		\begin{tabular}{ lcllr }
+		\begin{tabular}{ l c l l l }
 			\multicolumn{3}{c}{\textit{OSC Type Tag String}} \\
 			\cline{1-3}
 			Módulo			& Número			& Parámetro				& \textit{Level} 	& Módulo de Synthi 100 \\
 			
+			% Módulo de Envelope Shaper.
+			\hline 
+			\multirow{9}{*}{\texttt{/env}}	& \multirow{9}{*}{\texttt{/[1-3]}}
+			& \texttt{/selector}	&\texttt{[1-5]} & \multirow{9}{*}{\textit{Envelope Shapers}}\\
+			& & \texttt{/delay} & \texttt{[0.0-10.0]} & \\
+			& & \texttt{/attack} & \texttt{[0.0-10.0]} & \\
+			& & \texttt{/decay} & \texttt{[0.0-10.0]} &\\
+			& & \texttt{/sustain} & \texttt{[0.0-10.0]}  &\\
+			& & \texttt{/release} & \texttt{[0.0-10.0]} &\\
+			& & \texttt{/envelopeLevel} & \texttt{[-5.0-5.0]} &\\
+			& & \texttt{/signalLevel} & \texttt{[-5.0-5.0]} &\\
+			& & \texttt{/gate} & \texttt{[0-1]} &\\
+			\hline
+			
+			% Módulo de Ring Modulator.
+			\multirow{1}{*}{\texttt{/ring}}	& \multirow{1}{*}{\texttt{/[1-2]}}	& \texttt{/level}	&\texttt{[0.0-10.0]} & \multirow{1}{*}{\textit{Ring Modulators}}\\
+			\hline
+			
 			% Módulo de oscilador.
 			\hline 
-			\multirow{7}{*}{\texttt{/osc}}	& \multirow{7}{*}{\texttt{/[1-12]}}	& \texttt{/pulse/level}	&\texttt{[0.0-10.0]} & \multirow{7}{*}{\textit{Oscillators}}\\
+			\multirow{8}{*}{\texttt{/osc}}	& \multirow{8}{*}{\texttt{/[1-12]}}	& \texttt{/pulse/level}	&\texttt{[0.0-10.0]} & \multirow{8}{*}{\textit{Oscillators}}\\
 			& & \texttt{/pulse/shape} & \texttt{[-5.0-5.0]} & \\
 			& & \texttt{/sine/level} & \texttt{[0.0-10.0]} & \\
 			& & \texttt{/sine/symmetry} & \texttt{[-5.0-5.0]} &\\
 			& & \texttt{/triangle/level} & \texttt{[0.0-10.0]}  &\\
 			& & \texttt{/sawtooth/level} & \texttt{[0.0-10.0]} &\\
 			& & \texttt{/frequency} & \texttt{[0.0-10.0]} &\\
+			& & \texttt{/range} & \texttt{[0-1]} &\\
 			
 			% Módulo de Noise generator
 			\hline
@@ -31,15 +50,34 @@ Esta interfaz única de comunicación de la clase Synthi100 con el exterior exti
 			& & \texttt{/level} &\texttt{[0.0-10.0]}& \\
 			\hline
 			
+			% Módulo de Random control voltage generator
+			\hline
+			\multirow{5}{*}{\texttt{/random}}	& 	& \texttt{/mean}	&\texttt{[0.0-10.0]} \\
+			& & \texttt{/variance} &\texttt{[-5.0-5.0]}&  \multirow{2}{*}{\textit{Random Control}}\\
+			& & \texttt{/voltage1} &\texttt{[0.0-10.0]}& \multirow{2}{*}{\textit{Voltage Generator}}\\
+			& & \texttt{/voltage2} &\texttt{[0.0-10.0]}& \\
+			& & \texttt{/key} &\texttt{[-5.0-5.0]}& \\
+			\hline
+			
 			% Módulo de Output channels
 			\multirow{4}{*}{\texttt{/out}}	& \multirow{4}{*}{\texttt{/[1-8]}}	& \texttt{/filter}	&\texttt{[-5.0-5.0]} & \multirow{4}{*}{\textit{Input Amplifiers}}\\
 			& & \texttt{/pan} & \texttt{[-5.0-5.0]} & \\
-			& & \texttt{/on} & \texttt{[0/1]} & \\
+			& & \texttt{/on} & \texttt{[0-1]} & \\
 			& & \texttt{/level} & \texttt{[0.0-10.0]} &\\
 			\hline
 			
 			% Módulo de Input Amplifiers
 			\multirow{1}{*}{\texttt{/in}}	& \multirow{1}{*}{\texttt{/[1-8]}}	& \texttt{/level}	&\texttt{[0.0-10.0]} & \multirow{1}{*}{\textit{Output Channels}}\\
+			\hline
+			
+			% Módulo de Patchbay de Audio
+			\multirow{1}{*}{\texttt{/patchA}}	& 	
+			& \texttt{/[67-128]/[1-66]} 	&\texttt{[0.0-1.0]} & \multirow{1}{*}{\textit{Audio Control}}\\
+			\hline
+			
+			% Módulo de Patchbay de Voltaje
+			\multirow{1}{*}{\texttt{/patchV}}	& 	
+			& \texttt{/[67-128]/[1-66]} 	&\texttt{[0.0-1.0]} & \multirow{1}{*}{\textit{Voltage Control}}\\
 			\hline
 			
 		\end{tabular}
