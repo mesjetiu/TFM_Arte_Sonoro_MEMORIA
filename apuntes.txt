@@ -73,6 +73,15 @@ Esquema general de la memoria
 Hablar de la realimentación y la impredicibilidad de este efecto tanto en los dispositivos analógicos como en los digitales.
 
 
+En "Futuro de la aplicación" hablar de la necesidad de mantener, perfeccionar y ampliarla. Para ello se necesitan recursos.
+
+
+En la introducción hablar de "qué no es este trabajo":
+* Una imitación exacta del comportamiento del Synthi 100.
+* Un manual de síntesis analógica.
+* Un manual de servicio del Synthi 100.
+
+
 
 Descripción de los objetivos particulares necesarios para llevar a la cabo el trabajo
 =====================================================================================
