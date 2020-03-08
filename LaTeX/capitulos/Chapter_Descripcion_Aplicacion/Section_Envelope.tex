@@ -31,7 +31,9 @@ No hay nada que nos limite a tres duraciones y transiciones (\textit{attack}, \t
 
 TABLA: diferentes envolventes explicadas por ADSR
 
-\subsection{Del generador de \textit{trapezoides} del Synthi 100 al \textit{ADSR} del Synthi 100 del GME}
+\subsection{\textit{Envelope Shaper} en Synthi 100}
+
+\subsubsection{Del generador de \textit{trapezoides} del Synthi 100 al \textit{ADSR} del Synthi 100 del GME}
 
 Según el folleto de especificaciones técnicas de Synthi 100 publicado por EMS, el módulo \textit{Envelope Shaper} posee 4 diales para diseñar la forma de onda: \textit{delay}, \textit{attack}, \textit{on}, \textit{decay}. Atendiendo a las respectivas descripciones, los cuatro parámetros controlan duraciones, sin posibilidad de variar el nivel de la envolvente al modo en el que lo hace \textit{sustain} en el tipo ADSR. \textit{Delay} es el tiempo inicial en el que la envolvente se mantiene en valor 0; \textit{attack}, el tiempo en el que progresivamente asciende hasta su valor más alto; \textit{on} el tiempo en el que se mantienen en este valor; y \textit{decay}, el tiempo de descenso progresivo hasta el valor 0. La forma de onda es siempre un trapecio en el que podemos variar a la inclinación de sus lados no paralelos (\textit{attack} y \textit{decay}), y la longitud de su base menor (\textit{on}). La altura del trapecio ---el valor alcanzado tras \textit{attack}--- puede ser variada por otros dos diales: \textit{Trapezoid level} para su salida de voltaje, y \textit{Signal level}, para su salida de audio.
 
@@ -39,7 +41,7 @@ CREAR GRÁFICA DE LA ENVOLVENTE DEL SYNTHI 100 A PARTIR DEL FOLLETO
 
 El comportamiento de la envolvente en función de los controles de voltaje puede ser variado por el dial \textit{Triggering mode}, con cinco modos: \textit{Signal Threshold}, en el que una señal a partir de un determinado nivel (\textit{variado por el dial \textit{Threshold level}}) inicia un ciclo de la envolvente; En \textit{Hold} la envolvente comienza cuando recibe un valor positivo, no comenzando el tiempo de \textit{decay} hasta recibir un valor negativo;  \textit{Single Shot} inicia un ciclo de la envolvente cada vez que recibe un valor positivo; El modo \textit{Free run} inicia en bucle la envolvente; y \textit{Gated free run} hace lo mismo que \textit{Free run} pero solo si se recibe una señal \textit{gate} positiva.
 
-\subsection{Decisiones de implementación en SuperCollider}
+\subsubsection{Decisiones de implementación en SuperCollider}
 
 
 FIGURA DE FOTO DEL MÓDULO DE ENVOLVENTES DEL SYNTHI 100 DEL GME
@@ -51,7 +53,7 @@ Se observa un comportamiento aparentemente anómalo en los generadores de envolv
 En la tabla \ref{table:envolventes} se presenta de forma sintética el paralelismo del comportamiento ---en términos ADSR--- del Synthi 100 original, el del GME y el implementado en SuperCollider, en función de los modos de \textit{Triggering mode}. Las anomalías observadas en el GME y las soluciones abordadas son las siguientes:
 \begin{description}
 	\item[Comportamiento idéntico de \textit{Gated free run} y \textit{Triggered}] No se observa diferencia alguna: en ambos casos se procuce un ataque (\textit{attack}) y un release hasta el nivel 0(llamado \textit{decay}) seguido de un tiempo de espera (en este caso, \textit{release}). Se ha optado por la solución ---aparentemente más lógica--- de que, por una parte, \textit{Gated free run} funcione en bucle mientras que \textit{gate} tenga un valor positivo, algo que parece exigir el término \textit{Gated free run} y que aparece en las descripciones del Synthi 100 original. Por otra parte, se permite que \textit{sustain} aporte un nivel de llegada tras \textit{decay} y que, por tanto, \textit{relase} tenga la función de hacer progresar el nivel de \textit{sustain} hasta 0. \textit{Triggered} realiza lo mismo que \textit{Gated free run}, excepto que no entra en ningún caso en bucle.
-	\item[Comportamiento idéntico de \textit{Gated} y \textit{Hold}] En abmos casos la envolvente <<se para>> en \textit{sustain} mientras que \textit{gate} introduce un valor positivo. Puesto que el Synthi 100 del GME se diferencia del original ---entre otras cosas--- por la presencia del nivel \textit{sustain}, se ha optado por que \textit{Gated} <<se pare>> en el nivel de \textit{sustain} hasta que \textit{gate} tenga valor negativo, mientras que en \textit{Hold}, la parada se produzca tras \textit{atack}, algo que ya hacía el Synthi 100 original.
+	\item[Comportamiento idéntico de \textit{Gated} y \textit{Hold}] En abmos casos la envolvente <<se para>> en \textit{sustain} mientras que \textit{gate} introduce un valor positivo. Puesto que el Synthi 100 del GME se diferencia del original ---entre otras cosas--- por la presencia del nivel \textit{sustain}, se ha optado por que \textit{Gated} <<se pare>> en el nivel de \textit{sustain} hasta que \textit{gate} tenga valor negativo, mientras que en \textit{Hold}, la parada se produzca tras \textit{attack}, algo que ya hacía el Synthi 100 original.
 	\item[Excepto en bucles, \textit{delay} no tiene función] Se ha optado por hacer que  \textit{delay}  aporte un tiempo inicial antes de \textit{attack} en todos los casos (en bucle o sin él), tal como parece indicar EMS para el Synthi 100 original. Si se quiere anular su efecto, basta con poner el dial a 0.
 \end{description}
 
@@ -79,6 +81,6 @@ Es importante notar que el comportamiento observado en el sintetizador del GME p
 	\end{center}
 \end{table}
 
-\subsection{Diales de salida}
+\subsubsection{Diales de salida}
 
 \textit{Envelope Shaper} ofrece dos salidas, una de audio ---\textit{Signal Level}--- y otra de voltaje ---\textit{Envelope level}---. En ambos casos se ofrece la posibilidad de invertir la polaridad de la señal, haciendo que sus diales permitan valores entre -5 y 5. Ambas salidas son independientes. En el caso de la salida de voltaje, la señal es continua con fines de control de otros módulos, y en el caso de la salida de audio, su salida es una señal de audio recibida y modulada por la envolvente.
