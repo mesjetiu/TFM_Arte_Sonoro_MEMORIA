@@ -82,6 +82,8 @@ En la introducción hablar de "qué no es este trabajo":
 * Un manual de servicio del Synthi 100.
 
 
+En la introducción hablar de algún modo de la anécdota de TeX y la numeración de sus versiones con el número Pi, que muestra que un software nunca está terminado.
+
 
 Descripción de los objetivos particulares necesarios para llevar a la cabo el trabajo
 =====================================================================================
