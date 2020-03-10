@@ -6,13 +6,20 @@ El <<generador de envolvente>> (conocido por sus nombres en inglés, \textit{Env
 
 Una <<envolvente>> puede ser descrita como la forma que se da al desarrollo en el tiempo del nivel de un parámetro de una señal, habitualmente la amplitud. De esta forma, una señal continua generada, por ejemplo, con un oscilador, puede adquirir una evolución dinámica, así como un inicio y un final. Puesto que una envolvente puede <<envolver>> a cualquier tipo de señal, sea esta de audio como de voltaje, podemos hacer variar con ella otros parámetros como la frecuencia de un oscilador, la frecuencia de corte de un filtro, el nivel de salida de otra envolvente, etc.
 
-Históricamente, la envolvente surge inspirada por el comportamiento físico de los instrumentos musicales (IMAGEN: FORMA DE ONDA NOTA PIANO), de ahí que el tipo de envolvente más popular hasta nuestros días es el ADSR, siglas de los términos en inglés \textit{attack}, \textit{decay}, \textit{sustain} y \textit{release} (FIGURA: GRÁFICA ENVOLVENTE ADSR):
+Históricamente, la envolvente surge inspirada por el comportamiento físico de los instrumentos musicales (IMAGEN: FORMA DE ONDA NOTA PIANO), de ahí que el tipo de envolvente más popular hasta nuestros días es el ADSR, siglas de los términos en inglés \textit{attack}, \textit{decay}, \textit{sustain} y \textit{release} (Fig. \ref{fig:adsr}):
 \begin{description}
 	\item[\textit{Attack}] Tiempo transcurrido entre el nivel 0 y el punto álgido (convencionalmente 1). Es el equivalente al \textit{ataque} de un instrumento acústico tipo, en el que los sonidos transitorios pueden producir un rápido pico dinámico.
 	\item[\textit{Decay}] Tiempo transcurrido entre el final del ataque, con nivel 1 y el nivel de \textit{sustain}. En instrumentos acústicos, tras alcanzar el nivel máximo en el periodo de ataque, existe un progresivo \textit{decaimiento} dinámico del sonido hasta alcanzar un nivel estable.
 	\item[\textit{Sustain}] Nivel en el que la señal puede ser mantenida por tiempo indefinido (entre 0 y 1). A diferencia del resto de parámetros, el \textit{sustain} no es un parámetro temporal, sino de nivel. De hecho, es el único parámetro de nivel de toda la envolvente, ya que el nivel inicial y final siempre son 0 mientras que el nivel alcanzado en el ataque siempre es 1 (entendiendo estos valores como factor de cualquier unidad de medida). En los instrumentos acústicos, este nivel es mantenido a voluntad por el instrumentista. En los sintetizadores (analógicos o digitales) se utiliza el control de \textit{gate} para mantener la señal en \textit{sustain}.
 	\item[\textit{Release}] Tiempo transcurrido entre el final del mantenimiento de la señal (\textit{sustain}), y su extinción. 
 \end{description} 
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\textwidth]{env_ADSR}
+	\caption{Esquema de una envolvente tipo ADSR.}
+	\label{fig:adsr}
+\end{figure}
 
 \subsection{Control de la envolvente: \textit{Gate} y \textit{trigger}}
 
