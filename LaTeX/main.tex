@@ -6,7 +6,7 @@
 \usepackage[utf8]{inputenc} % acentos sin codigo
 \renewcommand{\shorthandsspanish}{}
 
-\usepackage{apacite}
+\usepackage[apaciteclassic]{apacite}
 \usepackage{titlesec, blindtext, color}
 \definecolor{gray75}{gray}{0.75}
 \newcommand{\hsp}{\hspace{20pt}}
@@ -24,6 +24,8 @@
 \usepackage{wasysym} % Para simbolos adicionales
 \usepackage{import}
 \usepackage{multirow}
+\usepackage{svg}
+
 
 \newcommand{\grad}{\hspace{-2mm}$\phantom{a}^{\circ}$}
 
@@ -71,12 +73,16 @@
 	\import{capitulos/Chapter_GME_Cuenca/}{Chapter_GME_Cuenca.tex}
 	\import{capitulos/Chapter_Descripcion_Aplicacion/}{Chapter_Descripcion_Aplicacion.tex}
 	
-	CITAS DE PRUEBA: Esto es una cita de ejemplo~\cite{Lieb} y otra~\cite{Supper} y otra~\cite{Curtis} y~\cite{GME}
+	CITAS DE PRUEBA: Esto es una cita de ejemplo~\cite{Lieb} y otra~\citeNP{Supper} y otra~\citeA{Curtis} y~\cite{GME}
+	
+	\cite[for more details]{GME}
 
 
 
 
 	\backmatter
+	
+	\bibliographystyle{apacite}
 	\bibliography{bibtex/biblio} % database is "biblio.bib" located in a "bibtex" subfolder 
 
 
