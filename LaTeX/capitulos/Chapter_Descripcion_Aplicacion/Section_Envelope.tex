@@ -1,4 +1,4 @@
-\section{Envelope Shapers}
+\section{\textit{Envelope Shapers}}
 
 El <<generador de envolvente>> (conocido por sus nombres en inglés, \textit{Envelope Shaper} o \textit{Envelope Generator}), es uno de los módulos, junto con el de los osciladores, que no suelen faltar en los sintetizadores analógicos. Pero esta omnipresencia no es paralela a su estandarización. Los parámetros que controlan el generador de envolvente dependen de cada fabricante e, incluso, de cada modelo. Por si fuera poco, precisamente una de las grandes diferencias entre el Synthi 100 de Cuenca y el resto de Synthi 100 son los parámetros del módulo \textit{Envelope Shaper}que este permite variar, lo cual da fe de la velocidad a la que el concepto de envolvente se desarrollaba por aquellos años.
 
@@ -51,7 +51,12 @@ El comportamiento de la envolvente en función de los controles de voltaje puede
 \subsubsection{Decisiones de implementación en SuperCollider}
 
 
-FIGURA DE FOTO DEL MÓDULO DE ENVOLVENTES DEL SYNTHI 100 DEL GME
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\textwidth]{images/envelopes}
+	\caption{Los tres módulos de envolventes del Synthi 100 del GME de Cuenca. El dial de la izquierda permite seleccionar entre diversos modos de funcionamiento. Los diales rojos permiten modular la envolvente con diversas duraciones y niveles, y los diales blancos controlan los niveles de las señales de salida.}
+	\label{fig:envelopes}
+\end{figure}
 
 El generador de envolventes que posee el Synthi 100 del GME muestra una clara evolución respecto a las primeras unidades que EMS fabricó de este sintetizador. La forma de onda es generada por cinco diales: \textit{delay}, \textit{attack}, \textit{decay}, \textit{sustain} y \textit{release}, que no es otra cosa que un ADSR ampliado por un delay inicial, parámetro existente en Synthi 100 desde sus orígenes, muy útil principalmente para las envolventes en bucle. Los modos que permite el dial \textit{Triggering mode} nos recuerdan a los originales, si bien tienen algunas diferencias. \textit{Free run} y \textit{Gated free run} se mantienen con un significado similar, el de crear bucles de la envolvente. Sorprende la existencia de dos modos que <<sostienen>> la señal mientras que la señal control \textit{gate} es positiva: \textit{Hold} ---que ya existía en Synthi 100--- y \textit{Gated}. A falta de unas descripciones por parte de EMS de su funcionamiento, podemos inferir que \textit{Hold} mantiene la señal en su punto más alto tras el ataque (tal como en los Synthi 100 primitivos), mientras que \textit{Gated} lo hará en el nivel de \textit{sustain}, como cabría de esperar en una envolvente standard ADSR. Sin embargo, experimentos realizados ad hoc en el Synthi 100 del GME muestran un comportamiento diferente del esperado, tanto en los modos \textit{Hold} y \textit{Gated}, como en \textit{Gated free run}.
 

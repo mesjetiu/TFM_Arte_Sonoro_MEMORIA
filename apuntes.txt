@@ -1,4 +1,11 @@
 TÍTULO DEL TFM:	??? (estoy buscando algo que haga referencia a la historia del GME, del S100, a su música... y que al tiempo diga algo de lo que voy a hacer)
+
+Julio propone: Synthi nGME ("new" GME)
+Variante: Synthi dGME ("digital" GME)
+
+Otra idea con GME: "Synthi GME" (recursivo: "GME's Modular Emulator" Es un guiño al GME. Sigue una tradición del software libre de hacer nombres recursivos)
+
+
 SUBTÍTULO:		"Una propuesta de emulación por software del sintetizador EMS Synthi 100 del Gabinete de Música Electroacústica de Cuenca"
 
 
