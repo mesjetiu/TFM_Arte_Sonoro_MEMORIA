@@ -1,8 +1,8 @@
-\documentclass[a4paper,openany,oneside,12pt]{book}
+\documentclass[a4paper,openany,oneside,12pt]{report}
 
 \usepackage[T1]{fontenc}
 \usepackage{textcomp}
-\usepackage[spanish]{babel} % espanol
+\usepackage[spanish,english]{babel} % espanol
 \usepackage[utf8]{inputenc} % acentos sin codigo
 \renewcommand{\shorthandsspanish}{}
 
@@ -51,19 +51,31 @@
 
 \begin{document}
 \bibliographystyle{apacite}
-%\frontmatter
-	\input{./portada/portada}
+ \selectlanguage{spanish}
+	\import{./portada/}{portada.tex}
 	\newpage
 	\mbox{}
 	\thispagestyle{empty} % para que no se numere esta página
-%	\pagestyle{fancy}
+	\pagestyle{fancy}
+
+
+\selectlanguage{spanish} 
+\begin{abstract}
+	\setcounter{page}{2}
+	Abstract en español
+	\thispagestyle{plain}
+\end{abstract}
+\selectlanguage{english} 
+\begin{abstract}
+	\setcounter{page}{3}
+	Abstract in English
+	\thispagestyle{plain}
+\end{abstract}
 
 
 
-
-	
-
-
+	\selectlanguage{spanish} 
+	\setcounter{page}{4}
 	\tableofcontents
 	\listoffigures % indice de figuras
 	\addcontentsline{toc}{chapter}{Índice de figuras}
@@ -71,8 +83,8 @@
 	\addcontentsline{toc}{chapter}{Índice de cuadros}
 	
 
-	
 
+	
 % Aquí van los diversos capítulos:
 
 	\import{capitulos/Chapter_Objetivos/}{Chapter_Objetivos.tex}
@@ -85,9 +97,6 @@
 
 
 
-
-	\backmatter
-	
 	\bibliographystyle{apacite}
 	\bibliography{bibtex/biblio} % database is "biblio.bib" located in a "bibtex" subfolder 
 
