@@ -7,3 +7,6 @@ LaTeX/main.pdf
 *.toc
 *.bbl
 *.blg
+*.out
+*.brf
+
