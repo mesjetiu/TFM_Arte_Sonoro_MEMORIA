@@ -43,7 +43,7 @@ Tal como se observa en las matrices de conexiones de audio y de control de volta
 
 Como entradas, en la matriz de \textit{control de voltaje} contamos con una por cada oscilador de control de la frecuencia, con el claro fin de permitir la técnica de síntesis por \textit{frecuencia modulada} (FM). En la matriz de \textit{señal de audio}, existe una entrada por oscilador \textit{Synchronisation inputs}, y una entrada (en los 6 primeros osciladores) de \textit{Pulse Width Modulation}, para la modulación de la forma de onda \textit{Pulse}.
 
-\subsection{Los osciladores de la aplicación \textit{Synthi100}}
+\subsection{Los osciladores de la aplicación \textit{\className}}
 A pesar de ser uno de los módulos más elementales, es uno de los que más líneas de código tiene tras de sí, ya que aglutina a 4 osciladores, si contamos por tales cada una de las formas de onda que lo componen. \textit{Sine} está compuesto por al menos 2 Ugens de Supercollider para, haciendo \textit{morphing}, poder imitar el cambio en la simetría de la onda. Las formas de onda \textit{Triangle} y \textit{Pulse} están también formadas por dos Ugens que hacen \textit{crossfade} entre ellos para evitar el efecto de \textit{aliasing}. Son muchos Ugens en total, que pueden comprometer la eficiencia en el funcionamiento del \textit{software} en su conjunto y, por tanto, uno de los elementos a mejorar en el futuro.
 
 A día de hoy, las entradas de audio \textit{Synchronisation inputs} y \textit{Pulse Width Modulation} están sin implementar.

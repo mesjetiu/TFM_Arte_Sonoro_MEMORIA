@@ -16,7 +16,7 @@ citecolor=red}
 \usepackage{titlesec, blindtext, color}
 \definecolor{gray75}{gray}{0.75}
 \newcommand{\hsp}{\hspace{20pt}}
-%\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
 \usepackage{graphicx} % graficos
 \usepackage{setspace}
 \usepackage{fancyhdr}
@@ -31,24 +31,16 @@ citecolor=red}
 \usepackage{multirow}
 \usepackage{svg}
 \usepackage{amssymb}
-
-
 \newcommand{\grad}{\hspace{-2mm}$\phantom{a}^{\circ}$}
-
 \clubpenalty=20000	% para que no haya líneas viudas en el texto.
 \widowpenalty=20000 % para que no haya huérfanas
-
 % indica a Latex contabilizar el nivel de gerarquía de texto hasta el cuarto nivel;
 \setcounter{secnumdepth}{4}
 % indica al comando de generación de tabla de contenido que incluya el cuarto nivel:
 \setcounter{tocdepth}{4}
 
 %% Title format
-
-
-
 \begin{comment}
-
 \titleformat
 {\chapter} % command
 [display] % shape
@@ -64,10 +56,9 @@ citecolor=red}
 \vspace{-0.5ex}%
 \rule{\textwidth}{0.3pt}
 ] % after-code
-
 \end{comment}
 
-
+\newcommand{\className}{SynthiGME}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
