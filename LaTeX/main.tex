@@ -31,6 +31,8 @@ citecolor=red}
 \usepackage{multirow}
 \usepackage{svg}
 \usepackage{amssymb}
+\usepackage{siunitx}
+\sisetup{load-configurations = abbreviations}
 \newcommand{\grad}{\hspace{-2mm}$\phantom{a}^{\circ}$}
 \clubpenalty=20000	% para que no haya líneas viudas en el texto.
 \widowpenalty=20000 % para que no haya huérfanas
@@ -38,6 +40,7 @@ citecolor=red}
 \setcounter{secnumdepth}{4}
 % indica al comando de generación de tabla de contenido que incluya el cuarto nivel:
 \setcounter{tocdepth}{4}
+
 
 %% Title format
 \begin{comment}
@@ -59,6 +62,7 @@ citecolor=red}
 \end{comment}
 
 \newcommand{\className}{SynthiGME}
+\newcommand{\appName}{Synthi \textsc{gme}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
