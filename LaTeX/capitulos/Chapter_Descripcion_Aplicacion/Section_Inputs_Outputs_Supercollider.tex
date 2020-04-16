@@ -1,0 +1,79 @@
+\section{Entradas y salidas del sistema}
+\sectionmark{Entradas y salidas}
+
+El Synthi 100 posee una serie de entradas y salidas de audio que permiten la recepción y el envío de señales. En la aplicación se ha procedido de un modo análogo al sintetizador, aprovechando la capacidad de SuperCollider de crear cualquier cantidad de puertos desde el servidor de sonido, quedando a disposición del sistema operativo. Estos canales pueden recibir audio --en este caso siempre digital-- y enviar audio desde y hacia cualquier otro software instalado. SuperCollider nombra automáticamente estos puertos numerándolos. La siguiente tabla muestra la correspondencia entre estos y los del Synthi. 
+
+\begin{table}
+	\begin{center}
+		\begin{tabular}{|l|l|l|l| }
+			\hline
+			\multirow{4}{*}{\parbox{5em}{Pan\\ outputs}} & \multirow{2}{*}{\parbox{5em}{  Channels\\ 1--4}} 
+			 & Left & \texttt{SuperCollider:out\_3}\\			
+			 & & Right & \texttt{SuperCollider:out\_4}\\	
+			 \cline{2-4}
+			 & \multirow{2}{*}{\parbox{5em}{  Channels\\ 5--8}} 
+			 & Left & \texttt{SuperCollider:out\_5}\\	
+			 & & Right & \texttt{SuperCollider:out\_6}\\			
+			 \hline
+			 \hline
+			 \multirow{8}{*}{} & \multirow{8}{*}{ \parbox{5em}{ Individual\\ channels\\ outputs}}
+			 & 1 & \texttt{SuperCollider:out\_7}\\			
+			 & & 2 & \texttt{SuperCollider:out\_8}\\			
+			 & & 3 & \texttt{SuperCollider:out\_9}\\			
+			 & & 4 & \texttt{SuperCollider:out\_10}\\			
+			 & & 5 & \texttt{SuperCollider:out\_11}\\			
+			 & & 6 & \texttt{SuperCollider:out\_12}\\			
+			 & & 7 & \texttt{SuperCollider:out\_13}\\			
+			 & & 8 & \texttt{SuperCollider:out\_14}\\			
+			 \hline
+			 \hline
+			 \multirow{8}{*}{\parbox{5em}{External\\ treatment\\ devices}} &  \multirow{4}{*}{\parbox{5em}{  Send\\ to device}}
+			 & 1 & \texttt{SuperCollider:out\_15}\\			
+			 & & 2 & \texttt{SuperCollider:out\_16}\\			
+			 & & 3 & \texttt{SuperCollider:out\_17}\\			
+			 & & 4 & \texttt{SuperCollider:out\_18}\\			
+			 \cline{2-4}
+			 & \multirow{4}{*}{\parbox{5em}{  Return from device}}
+			 & 1 & \texttt{SuperCollider:in\_3}\\			
+			 & & 2 & \texttt{SuperCollider:in\_4}\\			
+			 & & 3 & \texttt{SuperCollider:in\_5}\\			
+			 & & 4 & \texttt{SuperCollider:in\_6}\\			
+			 \hline
+			 \hline
+			\multirow{8}{*}{} &  \multirow{8}{*}{\parbox{5em}{  Input\\ amplifiers}}
+			 & 1 & \texttt{SuperCollider:in\_7}\\			
+			 & & 2 & \texttt{SuperCollider:in\_8}\\			
+			 & & 3 & \texttt{SuperCollider:in\_9}\\			
+			 & & 4 & \texttt{SuperCollider:in\_10}\\			
+			 & & 5 & \texttt{SuperCollider:in\_11}\\			
+			 & & 6 & \texttt{SuperCollider:in\_12}\\			
+			 & & 7 & \texttt{SuperCollider:in\_13}\\			
+			 & & 8 & \texttt{SuperCollider:in\_14}\\		
+			\cline{2-4}
+			 \multirow{2}{*}{} &  \multirow{2}{*}{Mic amp}
+			 & 1 & \texttt{SuperCollider:in\_15}\\			
+			 & & 2 & \texttt{SuperCollider:in\_16}\\			
+			 \hline
+		\end{tabular}
+		\caption[Entradas y salidas de la aplicación]{Entradas y salidas de audio del Synthi 100 y su correspondencia con las de la aplicación.}
+		\label{table:outputs_outputs}
+	\end{center}
+\end{table}
+
+
+\begin{table}
+	\begin{center}
+		\begin{tabular}{|c|c|c|c|c|c|} \hline
+			\multicolumn{6}{|c|}{$\mathbf{n_1n_2n_3}$}\\ \hline
+			\multirow{6}{*}{$500$} & \multirow{3}{*}{$410$} & \multirow{2}{*}{$320$} & {} & {}& $005$\\
+			{} & {} & {} & $203$ & $104$ & $041$\\
+			{} & {} & \multirow{2}{*}{$302$} & $230$ & $140$ & $014$\\
+			{} & \multirow{3}{*}{$401$} & {} & $221$ & $122$ & $032$\\
+			{} & {} & \multirow{2}{*}{$311$} & $212$ & $131$ & $023$\\
+			{} & {} & {} & {} & $113$ & $050$\\
+			\hline
+		\end{tabular}
+	\end{center}
+	\caption{Table}
+	\label{tab:matrix}
+\end{table}
