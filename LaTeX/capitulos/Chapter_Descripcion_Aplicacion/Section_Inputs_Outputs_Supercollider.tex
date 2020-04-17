@@ -1,7 +1,7 @@
 \section{Entradas y salidas del sistema}
 \sectionmark{Entradas y salidas}
 
-El Synthi 100 posee una serie de entradas y salidas de audio que permiten la recepción y el envío de señales. En la aplicación se ha procedido de un modo análogo al sintetizador, aprovechando la capacidad de SuperCollider de crear cualquier cantidad de puertos desde el servidor de sonido, quedando a disposición del sistema operativo. Estos canales pueden recibir audio --en este caso siempre digital-- y enviar audio desde y hacia cualquier otro software instalado. SuperCollider nombra automáticamente estos puertos numerándolos. La siguiente tabla muestra la correspondencia entre estos y los del Synthi. 
+El Synthi 100 posee una serie de entradas y salidas de audio que permiten la recepción y el envío de señales. En la aplicación se ha procedido de un modo análogo al sintetizador, aprovechando la capacidad de SuperCollider de crear cualquier cantidad de puertos desde el servidor de sonido, quedando a disposición del sistema operativo. Estos canales pueden recibir audio --en este caso siempre digital-- y enviar audio desde y hacia cualquier otro software instalado. SuperCollider nombra automáticamente estos puertos numerándolos. La tabla \ref{table:inputs_outputs} muestra la correspondencia entre estos y los del Synthi. 
 
 \begin{table}
 	\begin{center}
@@ -56,24 +56,15 @@ El Synthi 100 posee una serie de entradas y salidas de audio que permiten la rec
 			 \hline
 		\end{tabular}
 		\caption[Entradas y salidas de la aplicación]{Entradas y salidas de audio del Synthi 100 y su correspondencia con las de la aplicación.}
-		\label{table:outputs_outputs}
+		\label{table:inputs_outputs}
 	\end{center}
 \end{table}
 
+Como se puede observar, se han reservado las dos primeras entradas y las dos primeras salidas para el propio sistema operativo. Por defecto, SuperCollider conecta las entradas 1 y 2 al micrófono del sistema y las salidas 1 y 2 a los altavoces (Ver \ref{fig:entradas_salidas}). Dependiendo del sistema operativo utilizado, los puertos pueden ser renombrados para ser utilizados de forma más intuitiva. 
 
-\begin{table}
-	\begin{center}
-		\begin{tabular}{|c|c|c|c|c|c|} \hline
-			\multicolumn{6}{|c|}{$\mathbf{n_1n_2n_3}$}\\ \hline
-			\multirow{6}{*}{$500$} & \multirow{3}{*}{$410$} & \multirow{2}{*}{$320$} & {} & {}& $005$\\
-			{} & {} & {} & $203$ & $104$ & $041$\\
-			{} & {} & \multirow{2}{*}{$302$} & $230$ & $140$ & $014$\\
-			{} & \multirow{3}{*}{$401$} & {} & $221$ & $122$ & $032$\\
-			{} & {} & \multirow{2}{*}{$311$} & $212$ & $131$ & $023$\\
-			{} & {} & {} & {} & $113$ & $050$\\
-			\hline
-		\end{tabular}
-	\end{center}
-	\caption{Table}
-	\label{tab:matrix}
-\end{table}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\textwidth]{images/entradas_salidas}
+	\caption[Entradas y salidas al sistema]{Entradas y salidas de SuperCollider al sistema operativo con \appName. Los dos primeros puertos de entrada y de salida, están reservados por defecto a la entrada y salida estandar (micrófono y altavoces del ordenador).. Los puertos están numerados, y respetan el mismo orden que el que se encuentra en el Synthi 100}
+	\label{fig:entradas_salidas}
+\end{figure}
