@@ -15,6 +15,11 @@ Limitaciones encontradas de la simulación digital del procesamiento analógico:
 * latencia 
 
 
+Para la intro:
+* Se usa software libre.
+* Una herramienta pedagógica para aprender y de la que aprender
+* 
+
 
 
 
