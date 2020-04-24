@@ -1,7 +1,7 @@
 *.aux
 *.lof
 *.lot
-LaTeX/main.pdf
+*main.pdf
 *.gz
 *.log
 *.toc
