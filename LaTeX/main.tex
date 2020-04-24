@@ -33,6 +33,8 @@ citecolor=red}
 \usepackage{svg}
 \usepackage{amssymb}
 \usepackage{siunitx}
+\usepackage{setspace} % Interlineados
+
 \sisetup{load-configurations = abbreviations}
 \newcommand{\grad}{\hspace{-2mm}$\phantom{a}^{\circ}$}
 \clubpenalty=20000	% para que no haya líneas viudas en el texto.
@@ -77,6 +79,8 @@ citecolor=red}
 	\thispagestyle{empty} % para que no se numere esta página
 	\pagestyle{fancy}
 
+\onehalfspace
+
 
 \selectlanguage{spanish} 
 \begin{abstract}
@@ -106,9 +110,13 @@ citecolor=red}
 	
 % Aquí van los diversos capítulos:
 
+	\import{capitulos/Chapter_Introduccion/}{Introducción.tex}
 	\import{capitulos/Chapter_Objetivos/}{Chapter_Objetivos.tex}
+	\import{capitulos/Chapter_Otros_trabajos/}{Chapter_Otros_trabajos.tex}
 	\import{capitulos/Chapter_GME_Cuenca/}{Chapter_GME_Cuenca.tex}
 	\import{capitulos/Chapter_Descripcion_Aplicacion/}{Chapter_Descripcion_Aplicacion.tex}
+	\import{capitulos/Chapter_Futuro/}{Chapter_Futuro.tex}
+	\import{capitulos/Chapter_Conclusiones/}{Chapter_Conclusiones.tex}
 	
 %	CITAS DE PRUEBA: Esto es una cita de ejemplo~\cite{Lieb} y otra~\citeNP{Supper} y otra~\citeA{Curtis} y~\cite{GME}
 	
