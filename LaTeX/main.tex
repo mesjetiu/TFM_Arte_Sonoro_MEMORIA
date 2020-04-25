@@ -1,9 +1,9 @@
-%\documentclass[draft, a4paper,openany,oneside,12pt]{report}
-\documentclass[a4paper,openany,oneside,12pt]{report}
+\documentclass[draft, a4paper,openany,oneside,12pt]{report}
+%\documentclass[a4paper,openany,oneside,12pt]{report}
 
 \usepackage[T1]{fontenc}
 \usepackage{textcomp}
-\usepackage[spanish,english]{babel} % espanol
+\usepackage[spanish]{babel} % espanol
 \usepackage[utf8]{inputenc} % acentos sin codigo
 \renewcommand{\shorthandsspanish}{}
 
@@ -87,22 +87,21 @@ citecolor=red}
 \onehalfspace
 
 
-\selectlanguage{spanish} 
+
 \begin{abstract}
 	\setcounter{page}{2}
 	Abstract en español
 	\thispagestyle{plain}
 \end{abstract}
-\selectlanguage{english} 
+%\begin{otherlanguage}{english}
 \begin{abstract}
 	\setcounter{page}{3}
 	Abstract in English
 	\thispagestyle{plain}
 \end{abstract}
+%\end{otherlanguage}
 
 
-
-	\selectlanguage{spanish} 
 	\setcounter{page}{4}
 	\tableofcontents
 	\listoffigures % indice de figuras
@@ -131,9 +130,12 @@ citecolor=red}
 		\import{anexos/Anexo_Synthi_100_sheet/}{Synthi_100_sheet.tex}
 	
 	
-%	CITAS DE PRUEBA: Esto es una cita de ejemplo~\cite{Lieb} y otra~\citeNP{Supper} y otra~\citeA{Curtis} y~\cite{GME}
+	CITAS DE PRUEBA: Esto es una cita de ejemplo~\cite{Lieb} y otra~\citeNP{Supper} y otra~\citeA{Curtis} y~\cite{GME}  ~\cite{SC_book} ~\cite{Csound_book}
 	
 %	\cite[for more details]{GME}
+\cite[para más detalles]{Synthi_users_manual}
+ Esto es una cita de ejemplo~\cite{Synthi_users_manual} y otra~\citeNP{Synthi_users_manual} y otra~\citeA{Synthi_users_manual} y~\cite{Synthi_users_manual}
+
 
 	\bibliographystyle{apacite}
 	\bibliography{bibtex/biblio} % database is "biblio.bib" located in a "bibtex" subfolder 
