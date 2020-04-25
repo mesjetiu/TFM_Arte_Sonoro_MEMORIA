@@ -34,6 +34,7 @@ citecolor=red}
 \usepackage{amssymb}
 \usepackage{siunitx}
 \usepackage{setspace} % Interlineados
+\usepackage[toc,page]{appendix}
 
 \sisetup{load-configurations = abbreviations}
 \newcommand{\grad}{\hspace{-2mm}$\phantom{a}^{\circ}$}
@@ -63,6 +64,10 @@ citecolor=red}
 \rule{\textwidth}{0.3pt}
 ] % after-code
 \end{comment}
+
+\renewcommand{\appendixname}{Anexos}
+\renewcommand{\appendixtocname}{Anexos}
+\renewcommand{\appendixpagename}{Anexos}
 
 \newcommand{\className}{SynthiGME}
 \newcommand{\appName}{Synthi \textsc{gme}}
@@ -118,19 +123,19 @@ citecolor=red}
 	\import{capitulos/Chapter_Futuro/}{Chapter_Futuro.tex}
 	\import{capitulos/Chapter_Conclusiones/}{Chapter_Conclusiones.tex}
 	
+	
+	\appendix% ANEXOS ************************************
+	%\clearpage
+	%\addappheadtotoc
+	\appendixpage
+		\import{anexos/Anexo_Synthi_100_sheet/}{Synthi_100_sheet.tex}
+	
+	
 %	CITAS DE PRUEBA: Esto es una cita de ejemplo~\cite{Lieb} y otra~\citeNP{Supper} y otra~\citeA{Curtis} y~\cite{GME}
 	
 %	\cite[for more details]{GME}
 
-
-
 	\bibliographystyle{apacite}
 	\bibliography{bibtex/biblio} % database is "biblio.bib" located in a "bibtex" subfolder 
-
-
-
-
-
-
 
 \end{document}
