@@ -151,6 +151,22 @@ Gated F/R: como Free run pero cuando Gate=1
 
 
 
+BIBLIOGRAFÍA INTERESANTE
+
+
+artículo que defiende el sonido analógico frente al digital (argumentos erróneos a mi juicio) https://www.cnet.com/news/why-does-analog-sound-better-than-digital/  
+
+libro online de sonido digital: http://www.dspguide.com/pdfbook.htm. // Smith Steven. The Scientist and Engineer's Guide to Digital Signal
+Processing. Available from: http://www.dspguide.com/ch21/1.html. 
+
+Web de EMS: http://emssynthesisers.co.uk/
+
+http://120years.net/ems-synthesisers-peter-zinovief-united-kingdom-1969/ : Forrest Peter. 120 Years of Electronic Music. Available from:
+http://120years.net/ems-synthesisers-peter-zinovief-united-kingdom-1969/.
+
+
+
+
 
 
 

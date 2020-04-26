@@ -1,5 +1,5 @@
-\documentclass[draft, a4paper,openany,oneside,12pt]{report}
-%\documentclass[a4paper,openany,oneside,12pt]{report}
+%\documentclass[draft, a4paper,openany,oneside,12pt]{report}
+\documentclass[a4paper,openany,oneside,12pt]{report}
 
 \usepackage[T1]{fontenc}
 \usepackage{textcomp}
@@ -19,6 +19,9 @@ citecolor=red}
 \newcommand{\hsp}{\hspace{20pt}}
 \titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
 \usepackage{graphicx} % graficos
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{pdfpages}
 \usepackage{setspace}
 \usepackage{fancyhdr}
 \usepackage{eurosym}
@@ -128,6 +131,7 @@ citecolor=red}
 	%\addappheadtotoc
 	\appendixpage
 		\import{anexos/Anexo_Synthi_100_sheet/}{Synthi_100_sheet.tex}
+		\import{anexos/Anexo_Synthi_100_brouchure/}{Synthi_100_brouchure.tex}
 	
 	
 	CITAS DE PRUEBA: Esto es una cita de ejemplo~\cite{Lieb} y otra~\citeNP{Supper} y otra~\citeA{Curtis} y~\cite{GME}  ~\cite{SC_book} ~\cite{Csound_book}
