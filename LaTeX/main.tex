@@ -1,5 +1,5 @@
-%\documentclass[draft, a4paper,openany,oneside,12pt]{report}
-\documentclass[a4paper,openany,oneside,12pt]{report}
+\documentclass[draft, a4paper,openany,oneside,12pt]{report}
+%\documentclass[a4paper,openany,oneside,12pt]{report}
 
 \usepackage[T1]{fontenc}
 \usepackage{textcomp}
@@ -130,17 +130,23 @@ citecolor=red}
 	%\clearpage
 	%\addappheadtotoc
 	\appendixpage
+		\import{anexos/Anexo_instalacion_SynthiEMS/}{Instalacion_SynthiEMS.tex}
 		\import{anexos/Anexo_Synthi_100_sheet/}{Synthi_100_sheet.tex}
 		\import{anexos/Anexo_Synthi_100_brouchure/}{Synthi_100_brouchure.tex}
 	
 	
-	CITAS DE PRUEBA: Esto es una cita de ejemplo~\cite{Lieb} y otra~\citeNP{Supper} y otra~\citeA{Curtis} y~\cite{GME}  ~\cite{SC_book} ~\cite{Csound_book}
+% Lista de la bibliografía que será mostrada aunque no esté citada.
+	\nocite{Csound_book}
+	\nocite{Curtis}
+	\nocite{GME}
+	\nocite{Lieb}
+	\nocite{SC_book}
+	\nocite{Supper}
+	\nocite{Synthi100_brochure}
+	\nocite{Synthi_Australia}
+	\nocite{Synthi_users_manual}
+	\nocite{the_synthesizer}
 	
-%	\cite[for more details]{GME}
-\cite[para más detalles]{Synthi_users_manual}
- Esto es una cita de ejemplo~\cite{Synthi_users_manual} y otra~\citeNP{Synthi_users_manual} y otra~\citeA{Synthi_users_manual} y~\cite{Synthi_users_manual}
-
-
 	\bibliographystyle{apacite}
 	\bibliography{bibtex/biblio} % database is "biblio.bib" located in a "bibtex" subfolder 
 
