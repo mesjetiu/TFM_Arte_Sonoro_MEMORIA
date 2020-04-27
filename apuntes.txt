@@ -22,6 +22,13 @@ Para la intro:
 
 Una sección dedicada a EMS y Synthi
 
+Sobre la programación de la aplicación...
+Herramientas utilizadas en la elaboración del software.
+número de líneas de código
+decisiones tomadas
+vídeo de gource en youtube...
+hacer un diagrama de clases??
+
 
 
 Esquema general de la memoria
@@ -166,7 +173,13 @@ http://120years.net/ems-synthesisers-peter-zinovief-united-kingdom-1969/.
 
 
 
+buscar más bibliografía de SC: folletos, ayuda del software...
 
 
+
+MEJORAS FUTURAS
+no depender de SC3plugins
+completar los módulos
+añadir teclado MIDI
 
 
