@@ -29,6 +29,8 @@ decisiones tomadas
 vídeo de gource en youtube...
 hacer un diagrama de clases??
 
+Dedicar una sección a "settings" de SuperCollider
+
 
 
 Esquema general de la memoria
