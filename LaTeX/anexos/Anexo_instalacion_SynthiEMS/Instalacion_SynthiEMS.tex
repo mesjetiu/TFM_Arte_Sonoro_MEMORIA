@@ -1,7 +1,7 @@
- \chapter[Instalación y ejecución de \appName]{Instalación y ejecución de \appName}
-\chaptermark{Instalación de \appName}
+ \chapter[Instalación y ejecución de \appName]{Instalación y ejecución\\ de \appName}
+\chaptermark{Instalación}
 
-\appName~está distribuido como un \textit{quark} de SuperCollider, es decir, como un conjunto de clases empaquetadas y listas para ser instaladas en el sistema y ser usadas desde \textit{sclang}, el lenguaje de programación de SuperCollider.  Puesto que SuperCollider se distribuye para ser complilado en las plataformas más importantes de escritorio, a saber, Linux, Mac OS y Windows, por la misma razón \appName es también multiplataforma. Las instrucciones que aquí se encuentran son comunes a todos los sistemas operativos, si bien, determinadas acciones, como la instalación o la compilación de SuperCollider, pueden variar en sus detalles, para lo cual se ha de acudir a los documentos de ayuda pertinentes en cada caso.
+\appName~está distribuido como un \textit{quark} de SuperCollider, es decir, como un conjunto de clases empaquetadas y listas para ser instaladas en el sistema y ser usadas desde \textit{sclang}, el lenguaje de programación de SuperCollider.  Puesto que SuperCollider se distribuye para ser complilado en las plataformas más importantes de escritorio, a saber, Linux, Mac OS y Windows, por la misma razón \appName~ es también multiplataforma. Las instrucciones que aquí se encuentran son comunes a todos los sistemas operativos, si bien, determinadas acciones, como la instalación o la compilación de SuperCollider, pueden variar en sus detalles, para lo cual se ha de acudir a los documentos de ayuda pertinentes en cada caso.
 
 \section{Requisitos}
 \begin{description}
@@ -12,11 +12,25 @@
 	\item[sc3-plugins]  Se trata de una colección de \textit{UGens} de SuperCollider mantenidos por la comunidad. Puede ser compilado desde las fuentes:\\ \href{https://github.com/supercollider/sc3-plugins}{\texttt{https://github.com/supercollider/sc3-plugins}} o desde los binarios precompliados para cada sistema operativo desde el mismo repositorio.
 \end{description}
 
-\section{Instalación del \textit{quark} de \appName}
+\section{Instalación del \textit{quark}}
 
 \appName~ se encuentra alojado en \textit{github}, desde donde pueden ser descargado todo su código fuente. No existen binarios instalables ya que es el propio intérprete de SuperCollider quien se encarga de compilar todas las extensiones y \textit{quarks} instalados en el sistema en cada inicio.
 
-La forma más sencilla de instalar el \appName en su última versión es ejecutando la siguiente línea de código\footnote{Para ejecutar un código en SuperCollider basta con poner el cursor sobre la línea (o hacer un bloque con las líneas que interesan) y pulsar [Control + Entrar]. Esta combinación podría variar en función del sistema operativo y la versión de SuperCollider, con lo que es conveniente informarse en cada caso.} (asegurarse de que se tiene conexión a internet):
+\subsection{Instalación con la interfaz gráfica de \textit{Quark}}
+
+Una vez abierto el editor de SuperCollider, abrir el administrador de \textit{quarks} en el menú \textit{Language}/\textit{Quarks} (fig. \ref{fig:quark_ide}). Buscar en la lista alfabética el \textit{quark} llamado \texttt{SynthiGME}. A continuación, basta con hacer click en el botón con el símbolo <<+>> que hay justo en la columna anterior al nombre. En la parte inferior de la ventana se ofrecen datos relevantes del \textit{quark}, como su origen, una descripción, así como información sobre la instalación. Una vez instalado, es necesario recompilar las clases para poder usarlo, pulsando el botón \textit{Recompile class library}. Con esto \appName~ estará listo para ser utilizado.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\textwidth]{quark_ide}
+	\caption[Instalación gráfica del quark \texttt{SynthiGME}]{Instalación gráfica del quark \textit{SynthiGME}.}
+	\label{fig:quark_ide}
+\end{figure}
+
+
+\subsection{Instalación con código}
+
+La forma más sencilla de instalar el \appName~ en su última versión es ejecutando la siguiente línea de código en SuperCollider\footnote{Para ejecutar un código en SuperCollider basta con poner el cursor sobre la línea (o hacer un bloque con las líneas que interesan) y pulsar [Control + Entrar]. Esta combinación podría variar en función del sistema operativo y la versión de SuperCollider, con lo que es conveniente informarse en cada caso.} (Asegurarse de que se tiene conexión a internet):
 
 \begin{lstlisting}[style=SuperCollider-IDE, frame=single, numbers=left]
 Quarks.install("https://github.com/mesjetiu/SynthiGME.git");
@@ -43,7 +57,7 @@ thisProcess.recompile;
 
 \section{Ejecutar \appName}
 
-\appName es, en esencia, un conjunto de clases, de entre las cuales, solo una está diseñada para ser instanciada por el usuario: \texttt{SynthiGME}. Esta clase contiene el método \texttt{run}, que pone en marcha todas las rutinas de arranque de la aplicación: crea los \textit{busses} de audio que comunican todos los módulos entre sí, todos los \texttt{Synths}, o <<sintetizadores>> de SuperCollider, las rutinas, etc. Configura el servidor de audio para que acepte el número adecuado de entradas y salidas requerido.
+\appName~ es, en esencia, un conjunto de clases, de entre las cuales, solo una está diseñada para ser instanciada por el usuario: \texttt{SynthiGME}. Esta clase contiene el método \texttt{run}, que pone en marcha todas las rutinas de arranque de la aplicación: crea los \textit{busses} de audio que comunican todos los módulos entre sí, todos los \texttt{Synths}, o <<sintetizadores>> de SuperCollider, las rutinas, etc. Configura el servidor de audio para que acepte el número adecuado de entradas y salidas requerido.
 
 El siguiente código muestra varias formas de ejecutar \appName:
 \begin{lstlisting}[style=SuperCollider-IDE, frame=single,  numbers=left]
