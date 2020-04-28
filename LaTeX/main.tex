@@ -1,5 +1,5 @@
-\documentclass[draft, a4paper,openany,oneside,12pt]{report}
-%\documentclass[a4paper,openany,oneside,12pt]{report}
+%\documentclass[draft, a4paper,openany,oneside,12pt]{report}
+\documentclass[a4paper,openany,oneside,12pt]{report}
 %\usepackage{helvet}
 %\renewcommand{\familydefault}{\sfdefault}
 
@@ -8,6 +8,7 @@
 \usepackage[spanish]{babel} % espanol
 \usepackage[utf8]{inputenc} % acentos sin codigo
 \renewcommand{\shorthandsspanish}{}
+\addto{\captionsspanish}{\def\chaptername{}} % quita la palabra capítulo de los encabezados
 
 \usepackage[hidelinks]{hyperref}
 \hypersetup{colorlinks=true,
@@ -42,7 +43,9 @@ citecolor=red}
 \usepackage[toc,page]{appendix}
 \usepackage{listings}
 \usepackage{sclang-prettifier}
-%\usepackage{courier}%txtt
+\usepackage{float}
+%\usepackage{courier}
+%txtt
 
 \lstset{basicstyle=\ttfamily\footnotesize,breaklines=true}
 \lstset{frame=bottomline}
