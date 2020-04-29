@@ -1,4 +1,4 @@
-\section[Características de SuperCollider]{Características importantes y limitaciones de SuperCollider}
+\section[Características de SuperCollider]{Características importantes de SuperCollider y sus limitaciones}
 \sectionmark{SuperCollider}
 \label{sec:sc_features}
 
@@ -25,12 +25,29 @@ Existe una clara analogía entre una señal de audio analógica y \textit{audio 
 \subsection{Los \texttt{Synths} ocupan recursos...}
 Puede resultar una obviedad decir que tanto los \texttt{Synths} como los \textit{busses} digitales ocupan memoria y tiempo de ejecución, pero cuando estos elementos se empiezan a contar por miles, como en el caso de \appName, este es un factor que puede comprometer la eficiencia y la escalabilidad de la aplicación.
 
-EXPLICAR COMO SE USAN EFICIENTEMENTE LOS RECURSOS
+En el diseño de \appName~ se ha prestado una especial atención en la eficiencia. \textit{Sclang} es un lenguaje de alto nivel e interpretado \textit{just in time}, por lo que necesita de un consumo de recursos de computación mayor que el de lenguajes de bajo nivel y compliados, como ocurre con C o C++. Los \textit{Synth} son básicamente unas funciones que se ejecutan una vez cada ciclo de audio. Si cada módulo tiene entre uno y cinco \textit{Synths} y otro cada nodo de las matrices, contaríamos por varios miles los \textit{Synths} que se ejecutarían al mismo tiempo, lo cual comprometería el correcto funcionamiento del sistema en su conjunto.
+
+Para que esto no ocurra, todos los \textit{Synths} están <<pausados>> por defecto. Solo se ejecutan cuando cumplen ciertas condiciones. Cada módulo y cada \textit{Synth} tiene implementadas unas condiciones distintas para ejecutarse, pero, en términos generales, si la salida de un módulo no está conectada en la matriz a otro modulo, no producirá ninguna señal hasta que se <<le comunique>> que está conectado. Lo mismo ocurre si su salida tiene ganancia $0$. Otros factores, en función de las características de cada módulo, se sopesan a la hora de decidir su pausa o ejecución, como si recibe o no alguna entrada (en el caso de un efecto) o de si se espera que siga ejecutándose incluso sin entradas y salidas (el módulo \textit{Echo}, \ref{sec:echo}), para que siga procesándose la información que almacena temporalmente en su \textit{buffer}. 
 
 
-\subsection{Alisasing}
+\subsection{\textit{Aliasing}}
+Esta es una característica propia de cualquier sistema de audio digital, y que más pronto que tarde aparece como un obstáculo en la emulación de la síntesis analógica ya que esta última es ajena a esta característica.
 
-\subsection{Latencia}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.9\textwidth]{images/aliasing}
+	\caption[Gráfica de \textit{aliasing}]{Gráfica de aliasing. (CC BY-SA 3.0,\\ \href{https://commons.wikimedia.org/w/index.php?curid=275973}{\texttt{https://commons.wikimedia.org/w/index.php?curid=275973}})}
+	\label{fig:aliasing}
+\end{figure}
+
+Cuando una señal senoidal periódica de frecuencia $f$ es muestreada a una frecuencia $s$ mayor que $f/2$, la señal reconstruida con dichas muestras corresponde a una frecuencia inferior a $f$. Para evitar este efecto en señales producidas digitalmente, la frecuencia de muestreo ha de ser al menos $2s$. Este es el <<criterio de Nyquist>>, en honor a su descrubridor. 
+
+La figura \ref{fig:aliasing} muestra gráficamente este proceso. En rojo se representa la señal original, y en azul, la señal reconstruida a partir  de la muestras dibujadas como cuadrados. La frecuencia de la señal azul es mucho menor que la que se pretende reproducir. Solo una frecuencia mayor de muestreo (mayor densidad de cuadrados azules), al menos la mitad que la frecuencia de la señal roja, permitiría que la señal azul conservara la frecuencia.
+
+Esta característica de las señales digitales no es compartida por los sintetizadores analógicos, razón por la cual se convierte en no deseable. SuperCollider posee un gran abanico de \textit{UGens} cuya implementación intenta minimizar este efecto. Un criterio importante a la hora de elegir entre varios \textit{UGens} en el diseño de los \textit{Synths} de los módulos de Synthi 100 ha sido el que incorporasen algún tipo de sistema \textit{antialiasing}. Aun así, es impredecible el uso que se puede hacer de \appName: una simple frecuencia moduladaproducida con dos generadores senoidales producirá fácilmente \textit{aliasing}, ya que las frecuencias laterales producidas frecuentemente incumplirán el criterio de Nyquist.
+
+La única forma efectiva y práctica de limitar la presencia de \textit{aliasing} es aumentar en la medida de lo posible la tasa de audio (\textit{sample rate}). Aun así, es probable encontrar combinaciones de módulos y sus parámetros que superen el límite de Nyquist, por alto que este sea.
+
 
 
 

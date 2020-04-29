@@ -31,6 +31,8 @@ hacer un diagrama de clases??
 
 Dedicar una sección a "settings" de SuperCollider
 
+Describir el arbol de archivos del proyecto
+
 
 
 Esquema general de la memoria
