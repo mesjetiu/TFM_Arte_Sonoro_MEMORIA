@@ -187,3 +187,17 @@ completar los módulos
 añadir teclado MIDI
 
 
+
+Software utilizado en la elaboración del trabajo:
+
+Supercollider
+
+Inkscape
+
+Gimp
+
+TeXstudio
+
+Git
+
+
