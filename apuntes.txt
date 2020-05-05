@@ -201,3 +201,49 @@ TeXstudio
 Git
 
 
+**********************************
+Esquema sugerido por José Manuel en un email
+
+Vamos a comenzar a trabajar en la confección de tu TFM. 
+
+En términos generales, tu propuesta se basa en  la construcción de una herramienta de utilidad docente y artística. El corazón de un TFM con tal punto de partida debería describir el proceso de construcción de la herramienta en todo su detalle, pero debería constar de otras partes que son igualmente importantes, a la hora de presentarlo ante un tribunal.
+
+Considera en primer lugar el título del trabajo. Debe ser algo muy concreto, que comunique perfectamente de qué va la cuestión. En principio, lols títulos son prosaicos, pues. Si encuentras una forma poética que deje bien claro de qué se trata, perfecto. Si no, también es perfecto. Lo importante es que quede claro qué estás haciendo
+
+Puedes añadir un subtítulo. Si lo pones, debe clarificar algún aspecto que te parezca importante en relación a lo que as hecho. 
+
+Después viene el abstract en inglés, por si alguien de fuera del ámbito latino se interesa por tu trabajo. Un resumen en Castellano también es necesario. Uno puede ser traducción del otro. 
+
+Un índice con números de página para cada apartado es fundamental para que los miembros del tribunal puedan buscar cuestiones concretas en el texto. 
+
+Tras ese inicio, conviene realizar una introducción que amplíe lo anterior y concrete las líneas generales sobre los que encuadras tu trabajo. Marca bien los límites dejando claro lo que no vas a hacer en ese trabajo, porque un miembro del tribunal podría preguntarte acerca que cosas sobre las que no has pensado o trabajado en tu contexto.
+
+Como ya habrás pensado, todo esto se escribe después de haber escrito todo lo demás. :-)
+
+A partir de aquí puedes tener diversos capítulos y formas. Yo te sugiero lo siguiente 
+
+1. Un capítulo que analice el estado de la cuestión. Qué otras cosas has visto en el mundo que te llevan a hacer lo que haces…. Analiza brevente unos cuántos casos que tengan verdadera relevancia para la concepción de tu trabajo
+
+2. Una descripción de los objetivos particulares que necesites cubrir para llevar a la cabo el trabajo
+
+3. Una descripción metodológica de la forma en que te has planteado la asunción de los objetivos
+
+4. Una descripción exhaustiva de tu herramienta y su funcionamiento. 
+
+5. Una reflexión acerca de lo que ha supuesto para ti realizar esta investigación
+
+6. Como va la realización del trabajo a influenciar futuro artístico y profesional 
+
+7. Un capítulo de agradecimientos, si es necesario.
+
+8. Una bibliografía según las normas de la APA, que es el sistema que se emplea en la UB
+
+Todas las páginas deben ir numeradas para que cualquiera pueda citar párrafos de tu trabajo.
+
+
+Dicho esto, yo empezaría por el punto 2. teniendo en la cabeza también qué influencias vas a considerar en el primer punto. 
+
+Cuando podamos hablar por el campus, te lo haré saber. Estás matriculado, porque lo he visto, pero aún no aparece en el campus.
+
+
+

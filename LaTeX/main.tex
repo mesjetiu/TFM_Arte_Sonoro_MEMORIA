@@ -119,23 +119,40 @@ citecolor=red}
 
 \onehalfspace
 
+% Página en blanco
+\vfill
+\begin{center}
+	--Esta página ha sido dejada intencionalmente en blanco.--
+\end{center}
+\vfill
+\thispagestyle{empty}
+\setcounter{page}{2}
 
+
+%Página de dedicatoria
+\chapter*{}
+\pagenumbering{Roman} % para comenzar la numeracion de paginas en numeros romanos
+\begin{flushright}
+	\textit{A mi hija Ana Magdalena, \\
+		que lo mismo toca el clave que el theremín.}
+\end{flushright}
+\setcounter{page}{3}
 
 %\begin{otherlanguage}{english}
 \begin{abstract}
-	\setcounter{page}{3}
+	\setcounter{page}{4}
 	Abstract in English
 	\thispagestyle{plain}
 \end{abstract}
 %\end{otherlanguage}
 \begin{abstract}
-%	\setcounter{page}{3}
+	\setcounter{page}{5}
 	Abstract en español
 	\thispagestyle{plain}
 \end{abstract}
 
 
-	\setcounter{page}{4}
+	\setcounter{page}{6}
 	\tableofcontents
 	\listoffigures % indice de figuras
 	\addcontentsline{toc}{chapter}{Índice de figuras}
@@ -146,7 +163,6 @@ citecolor=red}
 
 	
 % Aquí van los diversos capítulos:
-
 	\import{capitulos/Chapter_Introduccion/}{Introduccion.tex}
 	\import{capitulos/Chapter_GME_Cuenca/}{Chapter_GME_Cuenca.tex}
 	\import{capitulos/Chapter_Otros_trabajos/}{Chapter_Otros_trabajos.tex}
