@@ -102,7 +102,7 @@ citecolor=red}
 
 \newcommand{\className}{SynthiGME}
 \newcommand{\appName}{Synthi \textsc{gme}}
-\newcommand{\version}{0.1.0}
+\newcommand{\version}{1.0.0}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -112,18 +112,15 @@ citecolor=red}
 	\import{./portada/}{portada.tex}
 	\newpage
 	\mbox{}
-	\thispagestyle{empty} % para que no se numere esta página
+%	\thispagestyle{empty} % para que no se numere esta página
+	\setcounter{page}{2}
+	\thispagestyle{plain}
 	\pagestyle{fancy}
 
 \onehalfspace
 
 
 
-\begin{abstract}
-	\setcounter{page}{2}
-	Abstract en español
-	\thispagestyle{plain}
-\end{abstract}
 %\begin{otherlanguage}{english}
 \begin{abstract}
 	\setcounter{page}{3}
@@ -131,6 +128,11 @@ citecolor=red}
 	\thispagestyle{plain}
 \end{abstract}
 %\end{otherlanguage}
+\begin{abstract}
+%	\setcounter{page}{3}
+	Abstract en español
+	\thispagestyle{plain}
+\end{abstract}
 
 
 	\setcounter{page}{4}
@@ -146,10 +148,9 @@ citecolor=red}
 % Aquí van los diversos capítulos:
 
 	\import{capitulos/Chapter_Introduccion/}{Introduccion.tex}
-	\import{capitulos/Chapter_Objetivos/}{Chapter_Objetivos.tex}
+	\import{capitulos/Chapter_GME_Cuenca/}{Chapter_GME_Cuenca.tex}
 	\import{capitulos/Chapter_Otros_trabajos/}{Chapter_Otros_trabajos.tex}
 	\import{capitulos/Chapter_Proceso_elaboracion/}{Proceso_trabajo.tex}
-	\import{capitulos/Chapter_GME_Cuenca/}{Chapter_GME_Cuenca.tex}
 	\import{capitulos/Chapter_Descripcion_Aplicacion/}{Chapter_Descripcion_Aplicacion.tex}
 	\import{capitulos/Chapter_Futuro/}{Chapter_Futuro.tex}
 	\import{capitulos/Chapter_Conclusiones/}{Chapter_Conclusiones.tex}
@@ -178,6 +179,7 @@ citecolor=red}
 	\nocite{Synthi_users_manual}
 	\nocite{the_synthesizer}
 	
+	\bibliographystyle{apacite}
 	
 	\bibliographystyle{apacite}
 	\bibliography{bibtex/biblio} % database is "biblio.bib" located in a "bibtex" subfolder 
