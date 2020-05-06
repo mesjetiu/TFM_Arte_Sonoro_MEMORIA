@@ -104,6 +104,22 @@ citecolor=red}
 \newcommand{\appName}{Synthi \textsc{gme}}
 \newcommand{\version}{1.0.0}
 
+% Keywords command
+\providecommand{\keywords}[1]
+{
+	\noindent
+	\small	
+	\textbf{\textit{Keywords---}} #1
+}
+
+% Keywords command (en español)
+\providecommand{\palabrasClave}[1]
+{
+	\noindent
+	\small	
+	\textbf{\textit{Palabras clave---}} #1
+}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
@@ -141,13 +157,14 @@ citecolor=red}
 %\begin{otherlanguage}{english}
 \begin{abstract}
 	\setcounter{page}{4}
-	Abstract in English
+	\import{capitulos/abstract/}{ingles.tex}
 	\thispagestyle{plain}
 \end{abstract}
 %\end{otherlanguage}
 \begin{abstract}
 	\setcounter{page}{5}
-	Abstract en español
+%	Abstract en español
+	\import{capitulos/abstract/}{espanol.tex}
 	\thispagestyle{plain}
 \end{abstract}
 
