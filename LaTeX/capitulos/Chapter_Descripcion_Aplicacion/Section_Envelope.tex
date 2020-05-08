@@ -30,8 +30,6 @@ La tecla \textit{bajada} y \textit{subida} tiene su análogo dentro del mundo de
 Si la señal \textit{gate} viene delimitada por su inicio y su fin ---puntos con los que se ponen en marcha los diferentes periodos de una envolvente--- el \textit{trigger} es cualquier señal cuando pasa de un valor de 0 o negativo hasta un valor positivo. Es el inicio de dicha señal (momento en el que pasa a ser mayor que 0) el que puede ser usado como \textit{trigger}. Para el desarrollo de una envolvente en la que no existe \textit{sustain} bastaría una señal \textit{trigger} para dar el <<pistoletazo de salida>> y recorrer sucesivamente todas sus etapas de principio a fin, con una duración total suma de todas ellas: \textit{attack}, \textit{decay} y \textit{release}. 
 
 
-FIGURA: GRÁFICA DE GATE Y TRIGGER
-
 \subsection{Otros tipos de envolventes}
 
 No hay nada que nos limite a tres duraciones y transiciones (\textit{attack}, \textit{decay} y \textit{release}) y a un nivel variable controlado con \textit{gate}, \textit{sustain}. De hecho, ADSR no es más que un caso especial de toda una infinidad de tipos de envolvente imaginables, especialmente en el mundo digital, donde podemos diseñar tantos periodos de transición como se quiera, asociados también a valores arbitrarios. Esta característica la encontramos en la clase \texttt{Env} de SuperCollider, si bien es común encontrarla en cualquier sintetizador digital moderno. Sin embargo, en los sintetizadores analógicos no hay más remedio que delimitar el número de parámetros de la envolvente, ya que cada uno de ellos será un dial. Por ello, podemos encontrar cierta variedad de envolventes que, en definitiva, podrían ser explicadas por configuraciones ADSR con los valores apropiados. 

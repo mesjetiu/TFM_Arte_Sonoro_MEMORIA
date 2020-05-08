@@ -1,8 +1,10 @@
-\chapter{Descripción metodológica del trabajo}
+\chapter[Descripción metodológica\dots]{Descripción metodológica del trabajo \sectionmark{Metodología}}
+\sectionmark{Metodología}
 
 El proceso de trabajo llevado a cabo para el presente proyecto, así como sus tiempos de planificación y ejecución, se exponen aquí desde dos perspectivas: la del proyecto global desde su concepción (investigación, contactos, visitas al GME, etc.), y la del desarrollo del software en sí, que lleva su propio tiempo y calendario. 
 
-\section{El proyecto en su conjunto}
+\section[El proyecto en su conjunto]{El proyecto en su conjunto \sectionmark{El proyecto\dots}}
+\sectionmark{El proyecto\dots}
 
 Una vez definida la idea general del proyecto, se procedió a dar lo siguientes pasos:
 
@@ -33,7 +35,8 @@ En enero de 2020 comenzó a estar operativo el Synthi 100 en su proceso de resta
 	\label{fig:Synthi_Synthi}
 \end{figure}
 
-\section{La programación de \appName}
+\section[La programación\dots]{La programación de \appName \sectionmark{La programación\dots}}
+\sectionmark{La programación\dots}
 
 Todo desarrollo de software requiere de un gran esfuerzo organizativo así como una buena estructuración de las diversas etapas. Consumir una etapa antes de tiempo puede provocar problemas irresolubles en el futuro. Desde el inicio, el código ha estado bajo el control de versiones \textit{Git}, y alojado en la plataforma \textit{Github}\footnote{En el momento de la escritura de esta memoria, el repositorio donde se encuntra todo el código es \href{https://github.com/mesjetiu/SynthiGME}{\texttt{https://github.com/mesjetiu/SynthiGME}}}. Este sistema permite registrar todos los cambios de código realizados momento a momento, con descripciones de las mismas. Además, permite el versionado y es imprescindible para poder ser instalado y utilizado como un paquete, de modo que el usuario no necesita trabajar directamente con el código del programa para poder ejecutarlo.
 
@@ -44,7 +47,7 @@ Las diversas etapas de desarrollo pueden observarse directamente en el repositor
 	
 	\item[Implementación de una interfaz gráfica externa] Los primeros elementos de la aplicación no podían manejarse desde ninguna interfaz gráfica. Todo se debía de manejar con código (algo natural, por otra parte, en SuperCollider). En un primer momento se prentendía separar completamente la interfaz gráfica del motor del sonido, de modo que dicha interfaz pudiera ser programada en cualquier lenguaje y en cualquier plataforma y su comunicación con el motor se realizaría íntegramente con mensajes OSC\footnote{Véase la sección \ref{sec:osc} dedicada al protocolo \textit{OSC} (pág. \pageref{sec:osc}).}. Una vez implementado este protocolo, incluso diseñada en parte una interfaz para móvil y tablet, se vio oportuno que la aplicación tuviera una interfaz gráfica en el propio ordenador, por defecto.
 	
-	\item[Implementación de la interfaz gráfica en SuperCollider] Hasta enero de 2020 aproximadamente, todo el código estaba dirigido a una interfaz OSC arriba descrita y ciertos módulos de prueba. La creación de una interfaz gráfica para el propio ordenador fue un punto de inflexión en el desarrollo de la aplicación. El Synthi 100 es demasiado grande como para ser contenido en pantallas móviles, y poco práctico si se plantea como diversas páginas de una aplicación móvil. La pantalla del ordenador permitía ver todos los módulos de un solo vistazo. Su inmediated, por otra parte, agilizó mucho el desarrollo de la aplicación. El lenguaje de programación, por otra parte, es el mismo que el del resto de los módulos, \textit{sclang}, y, en beneficio de un aspecto más realista, fue posible usar fotografías del Synthi 100 para realizar su diseño.
+	\item[Implementación de la interfaz gráfica en SuperCollider] Hasta enero de 2020 aproximadamente, todo el código estaba dirigido a una interfaz OSC, arriba descrita, y ciertos módulos de prueba. La creación de una interfaz gráfica para el propio ordenador fue un punto de inflexión en el desarrollo de la aplicación. El Synthi 100 es demasiado grande como para ser contenido en pantallas móviles, y poco práctico si se plantea como diversas páginas de una aplicación móvil. La pantalla del ordenador permitía ver todos los módulos de un solo vistazo. Su inmediated, por otra parte, agilizó mucho el desarrollo de la aplicación. El lenguaje de programación, por otra parte, es el mismo que el del resto de los módulos, \textit{sclang}, y, en beneficio de un aspecto más realista, fue posible usar fotografías del Synthi 100 para realizar su diseño.
 	
 	\item[Implementacion del resto de módulos] Una vez que interfaz gráfica y módulos estaban al mismo nivel de desarrollo, la evolución de ambos caminó a la par hasta hoy. Módulo a módulo fue siendo implementado y testeado en su conjunto. Con cierta frecuencia aparecían \textit{bugs} por suerte corregidos exitosamente. Esta etapa es la que llega hasta el presente y se proyecta hacia el futuro. El esqueleto de la app está terminado, con una gran parte de sus módulos implementados y funcionando de forma lógica e intercomunicada. Desde esta misma etapa, la aplicación ya pudo ser usada de forma funcional.
 \end{description}
