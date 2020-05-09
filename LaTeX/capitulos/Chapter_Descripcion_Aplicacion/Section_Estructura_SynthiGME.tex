@@ -1,0 +1,53 @@
+ \section[Estructura del \textit{quark}]{Estructura del \textit{quark} \appName \sectionmark{Estructura del \textit{quark}}}
+sectionmark{Estructura del \textit{quark}}
+
+A continuación se muestra el árbol de directorios en los que se organiza el \textit{Quark} de \appName. En la representación no se muestran los archivos concretos que albergan las definiciones de las clases, a excepción del de la clase principal \texttt{SynthiGME} y los que están alojados en el directorio raíz. 
+
+
+\begin{figure}[H]
+	\singlespace
+	\dirtree{%
+		.1 classes\DTcomment{ 
+			\begin{minipage}[t]{8cm}
+				Todas las clases de SuperCollider de \appName.
+		\end{minipage}}.
+		.2 GUI\DTcomment{ 
+			\begin{minipage}[t]{8cm}
+				Todas las clases, gráficos e imágenes de la interfaz gráfica de usuario.
+		\end{minipage}}.
+		.3 images.
+		.4 panels.
+		.4 widgets.
+		.2 modules\DTcomment{ 
+			\begin{minipage}[t]{8cm}
+				Las clases que representan a los módulos del Synthi 100.
+		\end{minipage}}.
+		.2 SGME\_Settings\DTcomment{ 
+			\begin{minipage}[t]{8cm}
+				Archivos de configuración (límites, rangos y otros niveles modificables).
+		\end{minipage}}.
+		.2 SynthiGME.sc\DTcomment{ 
+			\begin{minipage}[t]{8cm}
+				Clase principal.
+		\end{minipage}}.
+		.1 HelpSource\DTcomment{ 
+			\begin{minipage}[t]{8cm}
+				Archivos de ayuda y documentación.
+		\end{minipage}}.
+		.1 Installation\DTcomment{ 
+			\begin{minipage}[t]{8cm}
+				Scripts de ayuda y ejemplos.
+		\end{minipage}}.
+		.1 Ladish studio.
+		.1 TouchOSC.
+		.1 COPYING.
+		.1 README.md.
+		.1 SynthiGME.quark\DTcomment{ 
+			\begin{minipage}[t]{8cm}
+				Archivo de información del \textit{Quark} (para SuperCollider).
+		\end{minipage}}.
+	}
+\caption[Árbol de directorios de \appName]{Árbol de directorios de \appName.}
+	\label{fig:arbol_directorios}
+\end{figure}
+
