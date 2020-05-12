@@ -8,11 +8,11 @@ No es este el lugar para profundizar mundo del filtrado de señales, por su comp
 
 De igual modo que una señal luminosa puede ser descompuesta en diferentes longitudes de onda, formando líneas o bandas espectrales, el sonido también se puede representar en el dominio de la frecuencia, de manera que es susceptible de ser descrito como la suma de un número ilimitado de componentes sinusoidales, con su propia amplitud y fase. Los diferentes \textit{timbres} o \textit{colores} de un sonido están fuertemente determinados por esta composición frecuencial. Filtrar un sonido o señal no será otra cosa que dejar pasar ciertas frecuencias de una señal y cancelar otras, consiguiendo un producto sonoro diferente de la señal original a nivel tímbrico.
 
-A grandes rasgos, los tres tipos de filtros más importantes (Fig. \ref{fig:filtersgraph}) son el \textit{de paso bajo} (LPF), el \textit{de paso alto} (HPF) y el \textit{de paso banda} (BPF). Los dos primeros tiene la característica común de dejar pasar solo las componentes frecuenciales de un lado del espectro, bien del lado de los graves (bajos), bien del lado de los agudos (altos), teniendo como principal parámetro la \textit{frecuencia de corte}, a partir de la cual se atenúan o cancelan el resto de frecuencias. El filtro \textit{de paso de banda} tiene como variables una frecuencia central y una anchura de la banda que deja pasar. Otros parámetros importantes determinan el tipo de curva y de pendiente que tiene el filtro en su frecuencia de corte, lo que queda determinado, principalmente, por su \textit{orden}. 
+A grandes rasgos, los tres tipos de filtros más importantes (fig. \ref{fig:filtersgraph}) son el \textit{de paso bajo} (LPF), el \textit{de paso alto} (HPF) y el \textit{de paso banda} (BPF). Los dos primeros tiene la característica común de dejar pasar solo las componentes frecuenciales de un lado del espectro, bien del lado de los graves (bajos), bien del lado de los agudos (altos), teniendo como principal parámetro la \textit{frecuencia de corte}, a partir de la cual se atenúan o cancelan el resto de frecuencias. El filtro \textit{de paso de banda} tiene como variables una frecuencia central y una anchura de la banda que deja pasar. Otros parámetros importantes determinan el tipo de curva y de pendiente que tiene el filtro en su frecuencia de corte, lo que queda determinado, principalmente, por su \textit{orden}. 
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.7\textwidth]{images/filtersgraph}
+	\includegraphics[width=1\textwidth]{images/filtersgraph}
 	\caption[Tipos de filtro]{Diferentes tipos de filtro. De izquierda a derecha en la fila superior: \textit{pasa bajo}, \textit{pasa alto}, \textit{pasa banda} y \textit{rechaza banda}. En la fila inferior, diversos filtros producto de combinaciones de otros más simples (imagen original de SpinningSpark, CC BY-SA 3.0, modificada por el autor).}
 	\label{fig:filtersgraph}
 \end{figure}
@@ -28,7 +28,7 @@ El Synthi 100 cuenta en su primer panel con 8 módulos denominados \textit{filte
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.4\textwidth]{images/filters}
+	\includegraphics[width=0.6\textwidth]{images/filters}
 	\caption{Dos de los 8 filtros del Synthi 100 del GME.}
 	\label{fig:filters}
 \end{figure}
@@ -43,9 +43,9 @@ Para comprender mejor el comportamiento de este módulo, a continuación se desc
 
 \subsection{Implementación en Supercollider}
 
-Existen diversos UGens que pueden emular perfectamente el comportamiento de un filtro \textit{resonante}, es decir, del tipo \textit{de paso bajo} o \textit{de paso alto} con la adición de la amplificación de la frecuencia de corte. Se ha optado por usar los filtros \texttt{BLowPass} y \texttt{BHiPass} respectivamente. Estos forman parte del conjunto de filtros \textit{BEQSuite}, incluidos en las distribuciones estándar de SuperCollider. 
+Existen diversos \textit{UGens} que pueden emular perfectamente el comportamiento de un filtro \textit{resonante}, es decir, del tipo \textit{de paso bajo} o \textit{de paso alto} con la adición de la amplificación de la frecuencia de corte. Se ha optado por usar los filtros \texttt{BLowPass} y \texttt{BHiPass} respectivamente. Estos forman parte del conjunto de filtros \textit{BEQSuite}, incluidos en las distribuciones estándar de SuperCollider. 
 
-Existe, sin embargo, cierto comportamiento de los filtros resonantes analógicos que no es posible emular con estos filtros digitales: la posibilidad de convertirse en un oscilador cuando el valor de su resonancia se acerca al máximo sin contar con la existencia de una señal de input. Habitualmente, la salida de un filtro digital en estas circunstancias será nula. Para emular esta característica analógica, se ha añadido un ruido blanco constante de una amplitud casi insignificante (en torno a $-60 dB$). Este nivel de ruido es suficiente como para ser amplificado como para convertirse en señal audible en en la frecuencia de corte cuando el valor de \textit{response} se acerca a 10.
+Existe, sin embargo, cierto comportamiento de los filtros resonantes analógicos que no es posible emular con estos filtros digitales: la posibilidad de convertirse en un oscilador cuando el valor de su resonancia se acerca al máximo sin contar con la existencia de una señal de input. Habitualmente, la salida de un filtro digital en estas circunstancias será nula. Para emular esta característica analógica, se ha añadido un ruido blanco constante de una amplitud casi insignificante (en torno a $-60$ dB). Este nivel de ruido es suficiente como para ser amplificado como para convertirse en señal audible en en la frecuencia de corte cuando el valor de \textit{response} se acerca a 10.
 
 
 

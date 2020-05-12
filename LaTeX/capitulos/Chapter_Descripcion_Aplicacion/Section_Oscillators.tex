@@ -16,7 +16,7 @@ Los parámetros fundamentales de una señal periódica en cualquier sintetizador
 
 \subsection{El módulo \textit{Oscillator} en el Synthi 100}
 
-El Synthi 100 original de EMS estaba provisto de tres osciladores \textit{sinusoidales} y \textit{de diente de sierra}, tres \textit{triangulares} y \textit{rectangulares} y, por último, tres LFO, \textit{osciladores de baja frecuencia}. El cambio introducido en el Synthi 100 de Cuenca es de gran importancia ya que pasa de 9 a 12 osciladores, cada uno de los cuales es capaz de generar cualquiera de las cuatro formas de onda, pudiéndose todos ellos commutar entre \textit{High Frecuency} y \textit{Low Frecuency} con un sencillo interruptor. A pesar de no conservar la antigua división entre \textit{Low Frecuency Oscillator} y \textit{High Frecuency Oscillator}, llama la atención que solo los tres últimos osciladores (los númerados como 10, 11 y 12) tienen una salida de voltaje, como reminiscencia de aquella división, ya que, cualquiera de las salidas del resto de osciladores (como de cualquier módulo del sintetizador) puede ser utilizada como control de voltaje gracias a la posibilidad de usar los canales de salida (\textit{Output Channels}), como \textit{busses} entre el \textit{Patchbay} de audio y el de control de voltaje (HACER REFERENCIA A LOS CANALES DE SALIDA, DONDE SE EXPLICA ESTA CARACTERÍSTICA).
+El Synthi 100 original de EMS estaba provisto de tres osciladores \textit{sinusoidales} y \textit{de diente de sierra}, tres \textit{triangulares} y \textit{rectangulares} y, por último, tres LFO, \textit{osciladores de baja frecuencia}. El cambio introducido en el Synthi 100 de Cuenca es de gran importancia ya que pasa de 9 a 12 osciladores, cada uno de los cuales es capaz de generar cualquiera de las cuatro formas de onda, pudiéndose todos ellos commutar entre \textit{High Frecuency} y \textit{Low Frecuency} con un sencillo interruptor. A pesar de no conservar la antigua división entre \textit{Low Frecuency Oscillator} y \textit{High Frecuency Oscillator}, llama la atención que solo los tres últimos osciladores (los númerados como 10, 11 y 12) tienen una salida de voltaje, como reminiscencia de aquella división, ya que, cualquiera de las salidas del resto de osciladores (como de cualquier módulo del sintetizador) puede ser utilizada como control de voltaje gracias a la posibilidad de usar los canales de salida (\textit{Output Channels}), como \textit{busses} entre la matriz de audio y la de control de voltaje.
 
 
 
@@ -26,7 +26,7 @@ Cada oscilador del Synthi 100 de Cuenca está compuesto un interruptor LFO/HFO, 
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.7\textwidth]{images/osciladores}
+	\includegraphics[width=1\textwidth]{images/osciladores}
 	\caption[Osciladores del Synthi 100 del GME]{Tres de los 12 osciladores con los que cuenta el Synthi 100 del GME de Cuenca. A diferencia de versiones anteriores, este cuenta con todas cuatro formas de onda en cada uno de sus módulos, pudiendo ser utilizados tanto para bajas como altas frecuencias.}
 	\label{fig:osciladores}
 \end{figure}
@@ -46,7 +46,7 @@ Tal como se observa en las matrices de conexiones de audio y de control de volta
 
 Como entradas, en la matriz de \textit{control de voltaje} contamos con una por cada oscilador de control de la frecuencia, con el claro fin de permitir la técnica de síntesis por \textit{frecuencia modulada} (FM). En la matriz de \textit{señal de audio}, existe una entrada por oscilador \textit{Synchronisation inputs}, y una entrada (en los 6 primeros osciladores) de \textit{Pulse Width Modulation}, para la modulación de la forma de onda \textit{Pulse}.
 
-\subsection{Los osciladores de la aplicación \textit{\className}}
+\subsection{Los osciladores de la aplicación \appName}
 A pesar de ser uno de los módulos más elementales, es uno de los que más líneas de código tiene tras de sí, ya que aglutina a 4 osciladores, si contamos por tales cada una de las formas de onda que lo componen. \textit{Sine} está compuesto por al menos 2 Ugens de Supercollider para, haciendo \textit{morphing}, poder imitar el cambio en la simetría de la onda. Las formas de onda \textit{Triangle} y \textit{Pulse} están también formadas por dos Ugens que hacen \textit{crossfade} entre ellos para evitar el efecto de \textit{aliasing}. Son muchos Ugens en total, que pueden comprometer la eficiencia en el funcionamiento del \textit{software} en su conjunto y, por tanto, uno de los elementos a mejorar en el futuro.
 
 A día de hoy, las entradas de audio \textit{Synchronisation inputs} y \textit{Pulse Width Modulation} están sin implementar.

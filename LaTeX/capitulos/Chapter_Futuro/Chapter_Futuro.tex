@@ -11,14 +11,14 @@
 La forma más sencilla de ver el estado de implementación en el que se encuentra \appName~respecto al Synthi 100 analógico es ejecutándolo (ver \ref{ejecucion}) y observando los paneles 5 y 6, correspondientes a las matrices de \textit{audio} y \textit{voltaje} respectivamente. Por defecto, los nodos funcionales aparecen en un color más oscuro que los que aún no tienen ningún efecto. Estos paneles ofrecen así una información muy clara de qué módulos, qué entradas y qué salidas están implementadas y cuales no. Las figuras \ref{fig:nodos_enabled_audio} y \ref{fig:nodos_enabled_control} muestran el estado de implementación de \appName~en su versión \version.
 
 
-\begin{figure}
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=1\textwidth]{nodos_enabled_audio}
 	\caption[Módulos y nodos de \textit{audio} en funcionamiento]{Módulos y nodos de \textit{audio} en funcionamiento. Solo los nodos de color oscuro tienen una función asignada en la aplicación. Según se van implementando nuevos módulos, el número de nodos activos crece.}
 	\label{fig:nodos_enabled_audio}
 \end{figure}
 
-\begin{figure}
+\begin{figure} [H]
 	\centering
 	\includegraphics[width=1\textwidth]{nodos_enabled_control}
 	\caption[Módulos y nodos de \textit{control} en funcionamiento]{Módulos y nodos de \textit{control} en funcionamiento.}
@@ -30,12 +30,12 @@ La forma más sencilla de ver el estado de implementación en el que se encuentr
 El número de las versiones de \appName~está compuesto de tres grupos de cifras separadas por un punto: [\textit{mayor}].[\textit{menor}].[\textit{micro}]:
 
 \begin{description} 
-	\item[\textit{mayor}] Este número cambia cada vez que hay un cambio significativo en el software.  También podría variar por la acumulación de muchos cambios menores o por razones puramente tácticas de cara a su difusión.
-	\item[\textit{menor}] Se modifica cuando el software experimente cambios significativos pero que no llegan a merecer un nuevo número \textit{mayor}, como la creación de un nuevo módulo, la implementación de conexiones de audio o voltaje a un módulo, una nueva implementación de un \texttt{Synth}, etc.
+	\item[\textit{mayor}] Este número cambia cada vez que hay un cambio significativo en el software.  También puede variar por la acumulación de muchos cambios menores o por razones puramente tácticas de cara a su difusión.
+	\item[\textit{menor}] Se modifica cuando el software experimente cambios significativos pero que no llegan a merecer un nuevo número \textit{mayor}, como la creación de un nuevo módulo, la implementación de conexiones de audio o voltaje a un módulo, una nueva implementación de un \textit{Synth}, etc.
 	\item[micro] Este número indica cambios no significativos: refactorizaciones pequeñas, correcciones de errores no críticos, etc.
 \end{description}
 
-\appName pasará a su versión 1.0.0 en el momento de entrega de esta memoria. En el mismo repositorio de \appName~se incluirá una copia de este documento en el momento que se le asigne este número de versión.
+\appName~está en la versión 1.0.0 en el momento de entrega de esta memoria. En este caso, la razón por la que \textit{mayor} es 1 no es otra que la de unir esta instantánea del programa con la presente memoria.
 
 
 \section[Continuación del desarrollo]{Continuación del desarrollo de \appName \sectionmark{Continuación del desarrollo}}
@@ -47,7 +47,7 @@ Estos son los objetivos en los que se centrará el desarrollo del código de la 
 
 \begin{enumerate}
 	\item Implementar todos los módulos del Synthi 100 del GME de Cuenca.
-	\item Crear un sistema de memoria tanto de combinaciones estáticas como de combinaciones de eventos en el tiempo.
+	\item Crear un sistema de memorias tanto de combinaciones estáticas como de combinaciones de eventos en el tiempo.
 	\item Completar todas las entradas y salidas de los módulos.
 	\item Crear una interfaz de teclado MIDI para emular los dos teclados originales.
 	\item Mantener el código libre de errores.
@@ -70,11 +70,11 @@ De cara a al usuario y la usabilidad de la aplicación:
 
 \subsection{Difusión, formación e información}
 
-Este apartado es muy importante de cara al éxito de la aplicación. Los esfuerzos se centrarán en los siguientes puntos:
+Este apartado es muy importante de cara al éxito de la aplicación. Los esfuerzos se centrarán eventualmente en los siguientes puntos:
 
 \begin{enumerate}
 	\item Creación de un conjunto de videotutoriales de uso de \appName.
 	\item Ofrecer la posibilidad de charlas y talleres divulgativos en torno a \appName~o la programación en SuperCollider.
-	\item Completar la documentación en Supercollider.
+	\item Completar la documentación (\textit{Help}) en SuperCollider.
 \end{enumerate}
 
